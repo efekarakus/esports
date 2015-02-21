@@ -21,6 +21,12 @@ h1 {
 	text-align: center;
 }
 
+h2 {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 150%;
+}
+
 h1 span.highlight {
 	color: #c49246;
 }
@@ -47,4 +53,9 @@ a:hover {
 	width: 540px;
 	margin: 0 auto;
 	margin-top: 50px;
+}
+
+.content p.footnotes {
+    font-size: 12px;
+    font-style: italic;
 }

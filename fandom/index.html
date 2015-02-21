@@ -16,20 +16,29 @@
         <link rel="icon" type="image/png" href="./css/lcs.png">
 	</head>
 	<body>
-		<h1> LCS <span class="highlight">Fandom</span> Distribution </h1>
+		<h1> <span class="highlight">FANDOM</span> IN ESPORTS </h1>
 		<div class="author">
 			<a href="https://twitter.com/efekarakus" target="_blank">@efekarakus</a><br/>
 			<a href="http://efekarakus.com" target="_blank">&raquo; website </a>
 		</div>
 		<div class="content">
-			Fandom in <a href="http://en.wikipedia.org/wiki/Electronic_sports" target="_blank">eSports</a> is very different
-			than traditional sports.
-		</div>
-		<div id="na" class="vis">
-			<h2>NA LCS</h2>
-		</div>
-		<div id="eu" class="vis">
-			<h2>EU LCS</h2>
+            <p>
+            In this article, we take a look at fandom in <a href="http://en.wikipedia.org/wiki/Electronic_sports" target="_blank">eSports</a>.
+            More specifically, we focus on the European and North American <a href="http://na.lolesports.com/">LCS</a>.
+            We take a look at the activity rate of fans, loyalty rates, and how loyalty changed between two season.
+            </p>
+
+            <h2> Activity Rates </h2>
+
+            <h2> Fan Loyalty </h2>
+
+            <h2> Fandom Shifts </h2>
+
+            <p class="footnotes">
+                The data is based on a survey conducted on the League of Legends subreddit.
+                The aggregate results can be found 
+                <a href="https://docs.google.com/forms/d/1kvthtsEmpCgEa5DrEQlyBRg4bz8bdQpYJsP8ccq0sFM/viewanalytics">here</a>.
+            </p>
 		</div>
 	</body>
 
@@ -37,26 +46,5 @@
 	<script type="text/javascript" src="./libraries/jquery-1.11.2.min.js"></script>
 	<script type="text/javascript" src="./js/charts/bipartite.js"></script>
 	<script>
-
-		function draw(region) {
-			var path = "./data/" + region + ".json";
-
-			d3.json(path, function(error, data) {
-				if (error) return console.warn(error);
-
-				var chart = bipartite();
-
-				d3.select("#" + region)
-					.datum(data)
-					.call(chart);
-			});
-		}
-
-		function drawAll() {
-			draw("na");
-			draw("eu");
-		}
-		
-		drawAll();
 	</script>
 </html>
