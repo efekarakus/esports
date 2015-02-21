@@ -1,0 +1,62 @@
+<html>
+	<head>
+		<title>LCS Fandom Shifts</title>
+		<script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-17572263-1']);
+            _gaq.push(['_trackPageview']);
+            (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+        <link rel="stylesheet" type="text/css" href="./css/main.css"></link>
+        <link rel="stylesheet" type="text/css" href="./css/vis.css"></link>
+        <link rel="icon" type="image/png" href="./css/lcs.png">
+	</head>
+	<body>
+		<h1> LCS <span class="highlight">Fandom</span> Distribution </h1>
+		<div class="author">
+			<a href="https://twitter.com/efekarakus" target="_blank">@efekarakus</a><br/>
+			<a href="http://efekarakus.com" target="_blank">&raquo; website </a>
+		</div>
+		<div class="content">
+			Fandom in <a href="http://en.wikipedia.org/wiki/Electronic_sports" target="_blank">eSports</a> is very different
+			than traditional sports.
+		</div>
+		<div id="na" class="vis">
+			<h2>NA LCS</h2>
+		</div>
+		<div id="eu" class="vis">
+			<h2>EU LCS</h2>
+		</div>
+	</body>
+
+	<script type="text/javascript" src="./libraries/d3.min.js"></script>
+	<script type="text/javascript" src="./libraries/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="./js/charts/bipartite.js"></script>
+	<script>
+
+		function draw(region) {
+			var path = "./data/" + region + ".json";
+
+			d3.json(path, function(error, data) {
+				if (error) return console.warn(error);
+
+				var chart = bipartite();
+
+				d3.select("#" + region)
+					.datum(data)
+					.call(chart);
+			});
+		}
+
+		function drawAll() {
+			draw("na");
+			draw("eu");
+		}
+		
+		drawAll();
+	</script>
+</html>

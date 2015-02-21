@@ -3,7 +3,10 @@ Find out how the fans changed between the two seasons of League of Legends.
 @author Efe Karakus
 """
 
+import collections
 import csv
+import pprint
+import json
 
 PATH = 'data/reddit-survey.csv'
 
@@ -59,7 +62,7 @@ def get_flows(data):
         eu_s5 = entry[3] if entry[3] != "" else "empty"
 
         # get the directions between na teams
-        if na_s4 != "" or na_s5 != "":
+        if na_s4 != "empty" or na_s5 != "empty":
             if not na_s4 in na['s4']:
                 na['s4'][na_s4] = {'count': 1}
                 for team in NA_S5_TEAMS:
@@ -78,7 +81,7 @@ def get_flows(data):
                 na['s5'][na_s5]['count'] += 1
                 na['s5'][na_s5][na_s4] += 1
 
-        if eu_s4 != "" or eu_s5 != "":
+        if eu_s4 != "empty" or eu_s5 != "empty":
             if not eu_s4 in eu['s4']:
                 eu['s4'][eu_s4] = {'count': 1}
                 for team in EU_S5_TEAMS:
@@ -100,8 +103,62 @@ def get_flows(data):
 
     return (na, eu)
 
+def get_overall_stats(region):
+    counts = collections.defaultdict(int)
+    for season in region:
+        for team in region[season]:
+            counts[season] += region[season][team]['count']
+        counts[season] -= region[season]['empty']['count']
+    return dict(counts)
+
+def tojson(region, data):
+    with open(region + '.json', 'w') as fp:
+        json.dump(data, fp)
+
+def get_retention(region, title):
+    counts = collections.defaultdict(int)
+
+    maps = {
+        'na': {
+            "LMQ": "Team Impulse",
+            "Curse": "Team Liquid",
+            "Evil Geniuses": "Winterfox"
+        },
+        "eu": {
+            "Alliance": "Elements",
+            "Supa Hot Crew": "Meet Your Makers"
+        }
+    }
+
+    s4 = 0
+    s5 = 0
+    team_count = 0
+    for team in region["s4"]:
+        if team == "empty": continue
+
+        t = team
+        t2 = team
+
+        if t in maps[title]:
+            t2 = maps[title][t]
+
+        if not t2 in region["s4"][t]: continue
+
+        s4 += region["s4"][t]["count"]
+        s5 += region["s4"][t][t2]
+        team_count += 1
+
+    print title, team_count, "s4: %d" % s4, "s5: %d" % s5, (float(s5)/s4)*100
 
 data = get_data()
 (na, eu) = get_flows(data)
-print eu['s5']['SK Gaming']
-print eu['s4']['Alliance']
+na_overall = get_overall_stats(na)
+eu_overall = get_overall_stats(eu)
+
+get_retention(na, 'na')
+get_retention(eu, 'eu')
+
+#tojson('na', na)
+#tojson('eu', eu)
+print 'na', na_overall
+print 'eu', eu_overall
