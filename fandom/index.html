@@ -12,7 +12,7 @@
             })();
         </script>
         <link rel="stylesheet" type="text/css" href="./css/main.css"></link>
-        <link rel="stylesheet" type="text/css" href="./css/vis.css"></link>
+        <link rel="stylesheet" type="text/css" href="./css/flow.css"></link>
         <link rel="icon" type="image/png" href="./css/lcs.png">
 	</head>
 	<body>
@@ -24,27 +24,304 @@
 		<div class="content">
             <p>
             In this article, we take a look at fandom in <a href="http://en.wikipedia.org/wiki/Electronic_sports" target="_blank">eSports</a>.
-            More specifically, we focus on the European and North American <a href="http://na.lolesports.com/">LCS</a>.
-            We take a look at the activity rate of fans, loyalty rates, and how loyalty changed between two season.
+            More specifically, we focus on the European and North American <a href="http://na.lolesports.com/" target="_blank">LCS</a>.
+            We take a look at the activity rate of fans, loyalty rates, and how loyalty changed between season 4 and 5.
             </p>
 
             <h2> Activity Rates </h2>
-
+            <p>
+            There were 68,524 fans that have participated in our
+            <a href="https://docs.google.com/forms/d/1kvthtsEmpCgEa5DrEQlyBRg4bz8bdQpYJsP8ccq0sFM/prefill" target="_blank">survey</a>
+            on the League of Legends subreddit. We can see that the LCS has a stable number of fans. The North American
+            LCS has around 64,795 and the European LCS has around 58,761 fans. 
+            Furthermore, these numbers are really lower bounds.
+            There are around 200,000 viewers tuning in to watch the LCS regularly solely on 
+            <a href="http://www.twitch.tv/" target="_blank">Twitch</a>.
+            <a href="http://www.riotgames.com/" target="_blank">Riot Games</a> also provides streams on 
+            <a href="http://azubu.tv/" target="_blank">Azubu</a> and <a href="https://www.youtube.com/" target="_blank">YouTube</a>.
+            </p>
+        </div>
+        <div class="vis" id ="activity-rate">
+            <div class="cell">
+                <h3>NA</h3>
+                <table>
+                    <tr>
+                        <td>Season:</td>
+                        <td>S4</td>
+                        <td>S5</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Fans:</td>
+                        <td>64,928</td>
+                        <td>64,661</td>
+                        <td><span class="red">-0.41%</span></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="cell">
+                <h3>EU</h3>
+                <table>
+                    <tr>
+                        <td>Season:</td>
+                        <td>S4</td>
+                        <td>S5</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Fans:</td>
+                        <td>58,672</td>
+                        <td>58,849</td>
+                        <td><span class="green">+0.3%</span></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+		<div class="content">
             <h2> Fan Loyalty </h2>
-
+            <p>
+                Unlike traditional sports, eSports is <b>not tied to a location</b>. For NA, the tournament happens
+                at the Riot Games studio in Santa Monica, CA. For EU, the tournament is in Berlin, Germany.
+                Almost every team is staying near the city where the tournament takes place. Therefore, you don't necessarily
+                see local support for the teams.
+                There are teams which the roster has mostly the same nationalities such as <a href="http://lol.gamepedia.com/Cloud9" target="_blank">C9</a> in NA 
+                or <a href="http://lol.gamepedia.com/Team_ROCCAT" target="_blank">Giants!</a> in EU. 
+                However, as of recently we see more players coming from Korea, and China into both regions. We counted
+                only 1 team out of 10 in both NA and EU having the same nationalities for the players.
+            </p>
+            <p>
+                The LCS has started only on August 6 2012. Team names change frequently due to mostly sponsorphip 
+                related reasons. For example, <a href="http://lol.gamepedia.com/Curse_Gaming" target="_blank">Team Curse</a> became 
+                <a href="http://lol.gamepedia.com/Team_Liquid" target="_blank">Team Liquid</a> or 
+                <a href="http://lol.gamepedia.com/Alliance" target="_blank">Alliance</a> renamed
+                themselves to <a href="http://lol.gamepedia.com/Elements" target="_blank">Elements</a>. 
+                Rosters also change frequently between splits depending on the performance of the players. In NA,
+                only two teams from the previous split remained with the same roster out of 7 teams that continued. In EU, all the teams had 
+                a roster change. Due to these reasons, we don't see many fans being loyal to a brand.
+                Fans are more attached to player personalities. There are few
+                exceptions such as <a href="http://lol.gamepedia.com/TSM" target="_blank">TSM</a> or 
+                <a href="http://lol.gamepedia.com/CLG" target="_blank">CLG</a>, as the scene progresses and teams establish
+                themselves we expect to have fans being more loyal to a brand.
+            </p>
+            <p>
+                In the tables below, we display <b>Loyalty Rates</b> for both NA and EU. There were 7 teams that moved on
+                from S4 to S5. We count how many fans have supported the same team for both seasons. In NA, we can see that
+                <span class="neutral-positive">68%</span> have supported the same team across both season.
+                In EU, only <span class="neutral-negative">45%</span> of the viewers have supported the same team which means
+                more than half have switched over teams!
+            </p>
+        </div>
+        <div class="vis" id="fan-loyalty">
+            <div class="cell">
+                <h3>NA</h3>
+                <table>
+                    <tr>
+                        <td>S4</td>
+                        <td>S5 Loyals</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>64,023</td>
+                        <td>43,505</td>
+                        <td style="text-align:center;"><span class="neutral-positive">68%</span></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="cell">
+                <h3>EU</h3>
+                <table>
+                    <tr>
+                        <td>S4</td>
+                        <td>S5 Loyals</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>57,173</td>
+                        <td>25,673</td>
+                        <td style="text-align:center;"><span class="neutral-negative">45%</span></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="content" id="fan-shift">
             <h2> Fandom Shifts </h2>
+            <p>
+                In the interactive below, we show how fandom has been distributed from Season 4 to Season 5 in the LCS.
+            </p>
+        </div>
+        <div class="vis" id="flow-vis">
+            <h3>NA</h3>
+            <div class="flow-holder" id="na">
+                <div class="c c1">
+                    <div class="logo" data-team="TSM" data-season="4">
+                        <img src="./images/TSM.png"></img>
+                    </div>
+                    <div class="logo" data-team="CLG" data-season="4">
+                        <img src="./images/CLG.png"></img>
+                    </div>
+                    <div class="logo" data-team="C9" data-season="4">
+                        <img src="./images/C9.png"></img>
+                    </div>
+                    <div class="logo" data-team="DIG" data-season="4">
+                        <img src="./images/DIG.png"></img>
+                    </div>
+                    <div class="logo" data-team="CRS" data-season="4">
+                        <img src="./images/CRS.png"></img>
+                    </div>
+                    <div class="logo" data-team="EG" data-season="4">
+                        <img src="./images/EG.png"></img>
+                    </div>
+                    <div class="logo" data-team="LMQ" data-season="4">
+                        <img src="./images/LMQ.png"></img>
+                    </div>
+                    <div class="logo" data-team="COL" data-season="4">
+                        <img src="./images/COL.png"></img>
+                    </div>
+                    <div class="logo text" data-team="NS" data-season="4">
+                        No Support
+                    </div>
+                </div>
+                <div class="c c2">
+                </div>
+                <div class="c c3">
+                    <div class="logo" data-team="TSM" data-season="5">
+                        <img src="./images/TSM.png"></img>
+                    </div>
+                    <div class="logo" data-team="CLG" data-season="5">
+                        <img src="./images/CLG.png"></img>
+                    </div>
+                    <div class="logo" data-team="C9" data-season="5">
+                        <img src="./images/C9.png"></img>
+                    </div>
+                    <div class="logo" data-team="TL" data-season="5">
+                        <img src="./images/TL.png"></img>
+                    </div>
+                    <div class="logo" data-team="WFX" data-season="5">
+                        <img src="./images/WFX.png"></img>
+                    </div>
+                    <div class="logo" data-team="GV" data-season="5">
+                        <img src="./images/GV.png"></img>
+                    </div>
+                    <div class="logo" data-team="T8" data-season="5">
+                        <img src="./images/T8.png"></img>
+                    </div>
+                    <div class="logo" data-team="TIP" data-season="5">
+                        <img src="./images/TIP.png"></img>
+                    </div>
+                    <div class="logo" data-team="CST" data-season="5">
+                        <img src="./images/CST.png"></img>
+                    </div>
+                    <div class="logo" data-team="DIG" data-season="5">
+                        <img src="./images/DIG.png"></img>
+                    </div>
+                    <div class="logo text" data-team="NS" data-season="5">
+                        No Support
+                    </div>
+                </div>
+            </div>
+            <h3>EU</h3>
+            <div class="flow-holder" id="eu">
+                <div class="c c1">
+                    <div class="logo" data-team="FNC" data-season="4">
+                        <img src="./images/FNC.png"></img>
+                    </div>
+                    <div class="logo" data-team="ALL" data-season="4">
+                        <img src="./images/ALL.png"></img>
+                    </div>
+                    <div class="logo" data-team="GMB" data-season="4">
+                        <img src="./images/GMB.png"></img>
+                    </div>
+                    <div class="logo" data-team="SK" data-season="4">
+                        <img src="./images/SK.png"></img>
+                    </div>
+                    <div class="logo" data-team="SHC" data-season="4">
+                        <img src="./images/SHC.png"></img>
+                    </div>
+                    <div class="logo" data-team="ROC" data-season="4">
+                        <img src="./images/ROC.png"></img>
+                    </div>
+                    <div class="logo" data-team="MIL" data-season="4">
+                        <img src="./images/MIL.png"></img>
+                    </div>
+                    <div class="logo" data-team="CW" data-season="4">
+                        <img src="./images/CW.png"></img>
+                    </div>
+                    <div class="logo text" data-team="NS" data-season="4">
+                        No Support
+                    </div>
+                </div>
+                <div class="c c2">
+                </div>
+                <div class="c c3">
+                    <div class="logo" data-team="FNC" data-season="5">
+                        <img src="./images/FNC.png"></img>
+                    </div>
+                    <div class="logo" data-team="UOL" data-season="5">
+                        <img src="./images/UOL.png"></img>
+                    </div>
+                    <div class="logo" data-team="EL" data-season="5">
+                        <img src="./images/EL.png"></img>
+                    </div>
+                    <div class="logo" data-team="SK" data-season="5">
+                        <img src="./images/SK.png"></img>
+                    </div>
+                    <div class="logo" data-team="GMB" data-season="5">
+                        <img src="./images/GMB.png"></img>
+                    </div>
+                    <div class="logo" data-team="ROC" data-season="5">
+                        <img src="./images/ROC.png"></img>
+                    </div>
+                    <div class="logo" data-team="H2K" data-season="5">
+                        <img src="./images/H2K.png"></img>
+                    </div>
+                    <div class="logo" data-team="GIA" data-season="5">
+                        <img src="./images/GIA.png"></img>
+                    </div>
+                    <div class="logo" data-team="CW" data-season="5">
+                        <img src="./images/CW.png"></img>
+                    </div>
+                    <div class="logo" data-team="MYM" data-season="5">
+                        <img src="./images/MYM.png"></img>
+                    </div>
+                    <div class="logo text" data-team="NS" data-season="5">
+                        No Support
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
 
             <p class="footnotes">
                 The data is based on a survey conducted on the League of Legends subreddit.
                 The aggregate results can be found 
-                <a href="https://docs.google.com/forms/d/1kvthtsEmpCgEa5DrEQlyBRg4bz8bdQpYJsP8ccq0sFM/viewanalytics">here</a>.
+                <a href="https://docs.google.com/forms/d/1kvthtsEmpCgEa5DrEQlyBRg4bz8bdQpYJsP8ccq0sFM/viewanalytics" target="_blank">here</a>.
             </p>
 		</div>
 	</body>
 
 	<script type="text/javascript" src="./libraries/d3.min.js"></script>
 	<script type="text/javascript" src="./libraries/jquery-1.11.2.min.js"></script>
-	<script type="text/javascript" src="./js/charts/bipartite.js"></script>
+    <script type="text/javascript" src="./charts/flow.js"></script>
 	<script>
-	</script>
+        d3.json("./data/na-flow.json", function(error, data) {
+            if (error) return console.warn(error);
+
+            var chart = flow();
+
+            d3.select("#na")
+                .datum(data)
+                .call(chart);
+        });
+
+        d3.json("./data/eu-flow.json", function(error, data) {
+            if (error) return console.warn(error);
+
+            var chart = flow();
+
+            d3.select("#eu")
+                .datum(data)
+                .call(chart);
+        });
+
+    </script>
 </html>

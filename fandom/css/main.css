@@ -59,3 +59,54 @@ a:hover {
     font-size: 12px;
     font-style: italic;
 }
+
+.vis {
+    width: 1000px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.vis .cell {
+    background: #000;
+    border-radius: 5px;
+    display: inline-block;
+    margin-left: 20px;
+    padding: 5 10 5 10;
+}
+
+.vis .cell h3 {
+	color: #c49246;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+    text-align: left;
+    padding-left: 4px;
+}
+
+.vis .cell table {
+    margin-top: 10px;
+}
+
+.vis .cell td {
+    width: 70px;
+    padding-left: 2px;
+    padding-right: 2px;
+    text-align: left;
+}
+
+span.red {
+    color: #ff0000;
+}
+
+span.green {
+    color: #00ff00;
+}
+
+span.neutral-positive {
+    color: #AEC617;
+}
+
+span.neutral-negative {
+    color: #FB6903;
+}

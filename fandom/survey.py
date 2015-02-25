@@ -7,6 +7,7 @@ import collections
 import csv
 import pprint
 import json
+import operator
 
 PATH = 'data/reddit-survey.csv'
 
@@ -115,7 +116,7 @@ def tojson(region, data):
     with open(region + '.json', 'w') as fp:
         json.dump(data, fp)
 
-def get_retention(region, title):
+def print_retention(region, title):
     counts = collections.defaultdict(int)
 
     maps = {
@@ -150,15 +151,35 @@ def get_retention(region, title):
 
     print title, team_count, "s4: %d" % s4, "s5: %d" % s5, (float(s5)/s4)*100
 
+def print_top_counts(region, title):
+    print title, "S4"
+    teams = {}
+    for team in region["s4"]:
+        teams[team] = region["s4"][team]["count"]
+    for (team,count) in reversed(sorted(teams.items(), key = operator.itemgetter(1))):
+        print team, count
+    print ""
+    print title, "S5"
+    teams = {}
+    for team in region["s5"]:
+        teams[team] = region["s5"][team]["count"]
+    for (team,count) in reversed(sorted(teams.items(), key = operator.itemgetter(1))):
+        print team, count
+    print ""
+
+
 data = get_data()
 (na, eu) = get_flows(data)
 na_overall = get_overall_stats(na)
 eu_overall = get_overall_stats(eu)
 
-get_retention(na, 'na')
-get_retention(eu, 'eu')
+#print_retention(na, 'na')
+#print_retention(eu, 'eu')
+
+print_top_counts(na, "NA")
+print_top_counts(eu, "EU")
 
 #tojson('na', na)
 #tojson('eu', eu)
-print 'na', na_overall
-print 'eu', eu_overall
+#print 'na', na_overall
+#print 'eu', eu_overall
