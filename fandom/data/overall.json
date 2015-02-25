@@ -1,0 +1,214 @@
+{
+    "eu": {
+        "5": [
+            {
+                "count": 17626, 
+                "percentage": 30.0, 
+                "name": "FNC"
+            }, 
+            {
+                "count": 12836, 
+                "percentage": 22.0, 
+                "name": "UOL"
+            }, 
+            {
+                "count": 11927, 
+                "percentage": 20.0, 
+                "name": "EL"
+            }, 
+            {
+                "count": 10927, 
+                "percentage": 18.0, 
+                "name": "SK"
+            }, 
+            {
+                "count": 2320, 
+                "percentage": 4.0, 
+                "name": "GMB"
+            }, 
+            {
+                "count": 1644, 
+                "percentage": 3.0, 
+                "name": "ROC"
+            }, 
+            {
+                "count": 335, 
+                "percentage": 1.0, 
+                "name": "CW"
+            }, 
+            {
+                "count": 183, 
+                "percentage": 0.0, 
+                "name": "MYM"
+            }, 
+            {
+                "count": 529, 
+                "percentage": 1.0, 
+                "name": "H2K"
+            }, 
+            {
+                "count": 522, 
+                "percentage": 1.0, 
+                "name": "GIA"
+            }, 
+            {
+                "count": 496, 
+                "percentage": 1.0, 
+                "name": "NS"
+            }
+        ], 
+        "4": [
+            {
+                "count": 22203, 
+                "percentage": 37.0, 
+                "name": "FNC"
+            }, 
+            {
+                "count": 20121, 
+                "percentage": 34.0, 
+                "name": "ALL"
+            }, 
+            {
+                "count": 5602, 
+                "percentage": 9.0, 
+                "name": "GMB"
+            }, 
+            {
+                "count": 3475, 
+                "percentage": 6.0, 
+                "name": "SK"
+            }, 
+            {
+                "count": 2547, 
+                "percentage": 4.0, 
+                "name": "SHC"
+            }, 
+            {
+                "count": 2532, 
+                "percentage": 4.0, 
+                "name": "ROC"
+            }, 
+            {
+                "count": 1499, 
+                "percentage": 3.0, 
+                "name": "MIL"
+            }, 
+            {
+                "count": 693, 
+                "percentage": 1.0, 
+                "name": "CW"
+            }, 
+            {
+                "count": 673, 
+                "percentage": 1.0, 
+                "name": "NS"
+            }
+        ]
+    }, 
+    "na": {
+        "5": [
+            {
+                "count": 21653, 
+                "percentage": 33.0, 
+                "name": "TSM"
+            }, 
+            {
+                "count": 17020, 
+                "percentage": 26.0, 
+                "name": "CLG"
+            }, 
+            {
+                "count": 8958, 
+                "percentage": 14.0, 
+                "name": "C9"
+            }, 
+            {
+                "count": 7614, 
+                "percentage": 12.0, 
+                "name": "TL"
+            }, 
+            {
+                "count": 4279, 
+                "percentage": 7.0, 
+                "name": "WFX"
+            }, 
+            {
+                "count": 2463, 
+                "percentage": 4.0, 
+                "name": "GV"
+            }, 
+            {
+                "count": 906, 
+                "percentage": 1.0, 
+                "name": "T8"
+            }, 
+            {
+                "count": 493, 
+                "percentage": 1.0, 
+                "name": "CST"
+            }, 
+            {
+                "count": 832, 
+                "percentage": 1.0, 
+                "name": "TIP"
+            }, 
+            {
+                "count": 443, 
+                "percentage": 1.0, 
+                "name": "DIG"
+            }, 
+            {
+                "count": 457, 
+                "percentage": 1.0, 
+                "name": "NS"
+            }
+        ], 
+        "4": [
+            {
+                "count": 24295, 
+                "percentage": 37.0, 
+                "name": "TSM"
+            }, 
+            {
+                "count": 14385, 
+                "percentage": 22.0, 
+                "name": "CLG"
+            }, 
+            {
+                "count": 9864, 
+                "percentage": 15.0, 
+                "name": "C9"
+            }, 
+            {
+                "count": 5168, 
+                "percentage": 8.0, 
+                "name": "DIG"
+            }, 
+            {
+                "count": 4509, 
+                "percentage": 7.0, 
+                "name": "CRS"
+            }, 
+            {
+                "count": 3253, 
+                "percentage": 5.0, 
+                "name": "EG"
+            }, 
+            {
+                "count": 2549, 
+                "percentage": 4.0, 
+                "name": "LMQ"
+            }, 
+            {
+                "count": 905, 
+                "percentage": 1.0, 
+                "name": "COL"
+            }, 
+            {
+                "count": 190, 
+                "percentage": 0.0, 
+                "name": "NS"
+            }
+        ]
+    }
+}

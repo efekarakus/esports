@@ -12,7 +12,6 @@
             })();
         </script>
         <link rel="stylesheet" type="text/css" href="./css/main.css"></link>
-        <link rel="stylesheet" type="text/css" href="./css/vis.css"></link>
         <link rel="icon" type="image/png" href="./css/lcs.png">
 	</head>
 	<body>
@@ -24,27 +23,222 @@
 		<div class="content">
             <p>
             In this article, we take a look at fandom in <a href="http://en.wikipedia.org/wiki/Electronic_sports" target="_blank">eSports</a>.
-            More specifically, we focus on the European and North American <a href="http://na.lolesports.com/">LCS</a>.
-            We take a look at the activity rate of fans, loyalty rates, and how loyalty changed between two season.
+            More specifically, we focus on the European and North American <a href="http://na.lolesports.com/" target="_blank">LCS</a>.
+            We take a look at the activity rate of fans, loyalty rates, and how loyalty changed between season 4 and 5.
             </p>
 
             <h2> Activity Rates </h2>
-
+            <p>
+            There were 68,524 fans that have participated in our
+            <a href="https://docs.google.com/forms/d/1kvthtsEmpCgEa5DrEQlyBRg4bz8bdQpYJsP8ccq0sFM/prefill" target="_blank">survey</a>
+            on the League of Legends subreddit. We can see that the LCS has a stable number of fans. The North American
+            LCS has around 64,795 and the European LCS has around 58,761 fans. 
+            Furthermore, these numbers are really lower bounds.
+            There are around 200,000 viewers tuning in to watch the LCS regularly solely on 
+            <a href="http://www.twitch.tv/" target="_blank">Twitch</a>.
+            <a href="http://www.riotgames.com/" target="_blank">Riot Games</a> also provides streams on 
+            <a href="http://azubu.tv/" target="_blank">Azubu</a> and <a href="https://www.youtube.com/" target="_blank">YouTube</a>.
+            </p>
+        </div>
+        <div class="vis" id ="activity-rate">
+            <div class="cell">
+                <h3>NA</h3>
+                <table>
+                    <tr>
+                        <td>Season:</td>
+                        <td>S4</td>
+                        <td>S5</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Fans:</td>
+                        <td>64,928</td>
+                        <td>64,661</td>
+                        <td><span class="red">-0.41%</span></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="cell">
+                <h3>EU</h3>
+                <table>
+                    <tr>
+                        <td>Season:</td>
+                        <td>S4</td>
+                        <td>S5</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Fans:</td>
+                        <td>58,672</td>
+                        <td>58,849</td>
+                        <td><span class="green">+0.3%</span></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+		<div class="content">
             <h2> Fan Loyalty </h2>
-
+            <p>
+                Unlike traditional sports, eSports is <b>not tied to a location</b>. For NA, the tournament happens
+                at the Riot Games studio in Santa Monica, CA. For EU, the tournament is in Berlin, Germany.
+                Almost every team is staying near the city where the tournament takes place. Therefore, you don't necessarily
+                see local support for the teams.
+                There are teams which the roster has mostly the same nationalities such as <a href="http://lol.gamepedia.com/Cloud9" target="_blank">C9</a> in NA 
+                or <a href="http://lol.gamepedia.com/Team_ROCCAT" target="_blank">Giants!</a> in EU. 
+                However, as of recently we see more players coming from Korea, and China into both regions. We counted
+                only 1 team out of 10 in both NA and EU having the same nationalities for the players.
+            </p>
+            <p>
+                The LCS has started only on August 6 2012. Team names change frequently due to mostly sponsorphip 
+                related reasons. For example, <a href="http://lol.gamepedia.com/Curse_Gaming" target="_blank">Team Curse</a> became 
+                <a href="http://lol.gamepedia.com/Team_Liquid" target="_blank">Team Liquid</a> or 
+                <a href="http://lol.gamepedia.com/Alliance" target="_blank">Alliance</a> renamed
+                themselves to <a href="http://lol.gamepedia.com/Elements" target="_blank">Elements</a>. 
+                Rosters also change frequently between splits depending on the performance of the players. In NA,
+                only two teams from the previous split remained with the same roster out of 7 teams that continued. In EU, all the teams had 
+                a roster change. Due to these reasons, we don't see many fans being loyal to a brand.
+                Fans are more attached to player personalities. There are few
+                exceptions such as <a href="http://lol.gamepedia.com/TSM" target="_blank">TSM</a> or 
+                <a href="http://lol.gamepedia.com/CLG" target="_blank">CLG</a>, as the scene progresses and teams establish
+                themselves we expect to have fans being more loyal to a brand.
+            </p>
+            <p>
+                In the tables below, we display <b>Loyalty Rates</b> for both NA and EU. There were 7 teams that moved on
+                from S4 to S5. We count how many fans have supported the same team for both seasons. In NA, we can see that
+                <span class="neutral-positive">68%</span> have supported the same team across both season.
+                In EU, only <span class="neutral-negative">45%</span> of the viewers have supported the same team which means
+                more than half have switched over teams!
+            </p>
+        </div>
+        <div class="vis" id="fan-loyalty">
+            <div class="cell">
+                <h3>NA</h3>
+                <table>
+                    <tr>
+                        <td>S4</td>
+                        <td>S5 Loyals</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>64,023</td>
+                        <td>43,505</td>
+                        <td style="text-align:center;"><span class="neutral-positive">68%</span></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="cell">
+                <h3>EU</h3>
+                <table>
+                    <tr>
+                        <td>S4</td>
+                        <td>S5 Loyals</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>57,173</td>
+                        <td>25,673</td>
+                        <td style="text-align:center;"><span class="neutral-negative">45%</span></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="content" id="fan-shift">
             <h2> Fandom Shifts </h2>
+            <p>
+                In the tables below, we first show fandom distribution across both seasons. Secondly, 
+                we take a look at where the fans have gone to after season 4.
+            </p>
+        </div>
+        <div class="vis" id="fan-tables">
+        </div>
+        <div class="content">
 
             <p class="footnotes">
                 The data is based on a survey conducted on the League of Legends subreddit.
                 The aggregate results can be found 
-                <a href="https://docs.google.com/forms/d/1kvthtsEmpCgEa5DrEQlyBRg4bz8bdQpYJsP8ccq0sFM/viewanalytics">here</a>.
+                <a href="https://docs.google.com/forms/d/1kvthtsEmpCgEa5DrEQlyBRg4bz8bdQpYJsP8ccq0sFM/viewanalytics" target="_blank">here</a>.
             </p>
 		</div>
 	</body>
 
 	<script type="text/javascript" src="./libraries/d3.min.js"></script>
 	<script type="text/javascript" src="./libraries/jquery-1.11.2.min.js"></script>
-	<script type="text/javascript" src="./js/charts/bipartite.js"></script>
 	<script>
-	</script>
+        var tables = d3.select("#fan-tables");
+
+        d3.json("data/overall.json", function(error, json) {
+            if (error) console.warn(error);
+
+            var entry = tables.append("div")
+                .attr("class", "entry");
+
+            entry.append("h3")
+                .text("Fan Distribution By Season");
+
+            function fillOverall(div, title, region, season) {      
+                div.append("h3")
+                    .text(title);
+
+                var header = div.append("div")
+                    .attr("class", "row header");
+
+                header.append("div")
+                    .attr("class", "column header")
+                    .text("TEAM");
+
+                header.append("div")
+                    .attr("class", "column header")
+                    .text("COUNT");
+
+                header.append("div")
+                    .attr("class", "column header")
+                    .text("%");
+
+                var row = div.selectAll(".newRows")
+                    .data(json[region][season])
+                    .enter()
+                        .append("div")
+                        .attr("class", "row");
+
+                row.append("div")
+                    .attr("class", "column")
+                    .text(function(d) { return d.name === "NS" ? "No Support" : d.name; });
+
+                row.append("div")
+                    .attr("class", "column")
+                    .text(function(d) { return d.count; });
+
+                row.append("div")
+                    .attr("class", "column")
+                    .text(function(d) { return d.percentage; });
+            }
+
+            var seasonFourNA = entry.append("div")
+                .attr("class", "cell");
+
+            var seasonFiveNA = entry.append("div")
+                .attr("class", "cell");
+
+            entry = tables.append("div")
+                .attr("class", "entry");
+
+            var seasonFourEU = entry.append("div")
+                .attr("class", "cell");
+
+            var seasonFiveEU = entry.append("div")
+                .attr("class", "cell");
+
+
+            fillOverall(seasonFourNA, "NA - Season 4", "na", "4");
+            fillOverall(seasonFiveNA, "NA - Season 5", "na", "5");
+            fillOverall(seasonFourEU, "EU - Season 4", "eu", "4");
+            fillOverall(seasonFiveEU, "EU - Season 5", "eu", "5");
+
+        });
+
+        /*
+        tables.append("h3")
+            .text("Where Did The Fans Go?");
+        */
+    </script>
 </html>

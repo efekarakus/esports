@@ -59,3 +59,94 @@ a:hover {
     font-size: 12px;
     font-style: italic;
 }
+
+.vis {
+    width: 1000px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.vis .entry {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.vis h3 {
+    color: #c49246;
+}
+
+.vis .cell {
+    background: #191919;
+    border-color: #000;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 5px;
+    display: inline-block;
+    margin-left: 20px;
+    vertical-align: top;
+}
+
+.vis .cell h3 {
+	color: #c49246;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+    text-align: left;
+    padding: 5 10 5 10;
+    padding-left: 12px;
+
+    margin-bottom: 10px;
+}
+
+.vis .cell .row {
+    display: block;
+    height: 30px;
+}
+
+.vis .cell .row.header {
+    border-bottom: 1px solid #fff;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+.vis .cell .row .column {
+    display: inline-block;
+    text-align: center;
+    padding-top: 5px;
+    width: 80px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.vis .cell .row:hover {
+    background: #000;
+}
+
+.vis .cell table {
+    padding: 5 10 5 10;
+}
+
+.vis .cell td {
+    width: 70px;
+    padding-left: 2px;
+    padding-right: 2px;
+    text-align: left;
+}
+
+span.red {
+    color: #ff0000;
+}
+
+span.green {
+    color: #00ff00;
+}
+
+span.neutral-positive {
+    color: #AEC617;
+}
+
+span.neutral-negative {
+    color: #FB6903;
+}

@@ -1,0 +1,956 @@
+{
+    "teams": {
+        "CRS": {
+            "5": {}, 
+            "4": {
+                "GV": {
+                    "count": 726, 
+                    "percentage": 16.0
+                }, 
+                "DIG": {
+                    "count": 4, 
+                    "percentage": 0.0
+                }, 
+                "T8": {
+                    "count": 46, 
+                    "percentage": 1.0
+                }, 
+                "CLG": {
+                    "count": 242, 
+                    "percentage": 5.0
+                }, 
+                "TIP": {
+                    "count": 71, 
+                    "percentage": 2.0
+                }, 
+                "WFX": {
+                    "count": 142, 
+                    "percentage": 3.0
+                }, 
+                "C9": {
+                    "count": 123, 
+                    "percentage": 3.0
+                }, 
+                "TSM": {
+                    "count": 128, 
+                    "percentage": 3.0
+                }, 
+                "details": {
+                    "count": 4509, 
+                    "percentage": 7.0
+                }, 
+                "CST": {
+                    "count": 37, 
+                    "percentage": 1.0
+                }, 
+                "NS": {
+                    "count": 24, 
+                    "percentage": 1.0
+                }, 
+                "TL": {
+                    "count": 2966, 
+                    "percentage": 66.0
+                }
+            }
+        }, 
+        "TSM": {
+            "5": {
+                "CRS": {
+                    "count": 128, 
+                    "percentage": 1.0
+                }, 
+                "DIG": {
+                    "count": 447, 
+                    "percentage": 2.0
+                }, 
+                "LMQ": {
+                    "count": 218, 
+                    "percentage": 1.0
+                }, 
+                "EG": {
+                    "count": 220, 
+                    "percentage": 1.0
+                }, 
+                "CLG": {
+                    "count": 540, 
+                    "percentage": 2.0
+                }, 
+                "C9": {
+                    "count": 354, 
+                    "percentage": 2.0
+                }, 
+                "TSM": {
+                    "count": 19617, 
+                    "percentage": 91.0
+                }, 
+                "details": {
+                    "count": 21653, 
+                    "percentage": 33.0
+                }, 
+                "NS": {
+                    "count": 25, 
+                    "percentage": 0.0
+                }, 
+                "COL": {
+                    "count": 104, 
+                    "percentage": 0.0
+                }
+            }, 
+            "4": {
+                "GV": {
+                    "count": 367, 
+                    "percentage": 2.0
+                }, 
+                "DIG": {
+                    "count": 18, 
+                    "percentage": 0.0
+                }, 
+                "T8": {
+                    "count": 209, 
+                    "percentage": 1.0
+                }, 
+                "CLG": {
+                    "count": 1163, 
+                    "percentage": 5.0
+                }, 
+                "TIP": {
+                    "count": 106, 
+                    "percentage": 0.0
+                }, 
+                "WFX": {
+                    "count": 715, 
+                    "percentage": 3.0
+                }, 
+                "C9": {
+                    "count": 673, 
+                    "percentage": 3.0
+                }, 
+                "TSM": {
+                    "count": 19617, 
+                    "percentage": 81.0
+                }, 
+                "details": {
+                    "count": 24295, 
+                    "percentage": 37.0
+                }, 
+                "CST": {
+                    "count": 65, 
+                    "percentage": 0.0
+                }, 
+                "NS": {
+                    "count": 107, 
+                    "percentage": 0.0
+                }, 
+                "TL": {
+                    "count": 1255, 
+                    "percentage": 5.0
+                }
+            }
+        }, 
+        "DIG": {
+            "5": {
+                "CRS": {
+                    "count": 4, 
+                    "percentage": 1.0
+                }, 
+                "DIG": {
+                    "count": 372, 
+                    "percentage": 84.0
+                }, 
+                "LMQ": {
+                    "count": 9, 
+                    "percentage": 2.0
+                }, 
+                "EG": {
+                    "count": 7, 
+                    "percentage": 2.0
+                }, 
+                "CLG": {
+                    "count": 8, 
+                    "percentage": 2.0
+                }, 
+                "C9": {
+                    "count": 8, 
+                    "percentage": 2.0
+                }, 
+                "TSM": {
+                    "count": 18, 
+                    "percentage": 4.0
+                }, 
+                "details": {
+                    "count": 443, 
+                    "percentage": 1.0
+                }, 
+                "NS": {
+                    "count": 2, 
+                    "percentage": 0.0
+                }, 
+                "COL": {
+                    "count": 15, 
+                    "percentage": 3.0
+                }
+            }, 
+            "4": {
+                "GV": {
+                    "count": 376, 
+                    "percentage": 7.0
+                }, 
+                "DIG": {
+                    "count": 372, 
+                    "percentage": 7.0
+                }, 
+                "T8": {
+                    "count": 207, 
+                    "percentage": 4.0
+                }, 
+                "CLG": {
+                    "count": 1516, 
+                    "percentage": 29.0
+                }, 
+                "TIP": {
+                    "count": 74, 
+                    "percentage": 1.0
+                }, 
+                "WFX": {
+                    "count": 707, 
+                    "percentage": 14.0
+                }, 
+                "C9": {
+                    "count": 541, 
+                    "percentage": 10.0
+                }, 
+                "TSM": {
+                    "count": 447, 
+                    "percentage": 9.0
+                }, 
+                "details": {
+                    "count": 5168, 
+                    "percentage": 8.0
+                }, 
+                "CST": {
+                    "count": 69, 
+                    "percentage": 1.0
+                }, 
+                "NS": {
+                    "count": 69, 
+                    "percentage": 1.0
+                }, 
+                "TL": {
+                    "count": 790, 
+                    "percentage": 15.0
+                }
+            }
+        }, 
+        "TIP": {
+            "5": {
+                "CRS": {
+                    "count": 71, 
+                    "percentage": 9.0
+                }, 
+                "DIG": {
+                    "count": 74, 
+                    "percentage": 9.0
+                }, 
+                "LMQ": {
+                    "count": 398, 
+                    "percentage": 48.0
+                }, 
+                "EG": {
+                    "count": 32, 
+                    "percentage": 4.0
+                }, 
+                "CLG": {
+                    "count": 60, 
+                    "percentage": 7.0
+                }, 
+                "C9": {
+                    "count": 64, 
+                    "percentage": 8.0
+                }, 
+                "TSM": {
+                    "count": 106, 
+                    "percentage": 13.0
+                }, 
+                "details": {
+                    "count": 832, 
+                    "percentage": 1.0
+                }, 
+                "NS": {
+                    "count": 7, 
+                    "percentage": 1.0
+                }, 
+                "COL": {
+                    "count": 20, 
+                    "percentage": 2.0
+                }
+            }, 
+            "4": {}
+        }, 
+        "WFX": {
+            "5": {
+                "CRS": {
+                    "count": 142, 
+                    "percentage": 3.0
+                }, 
+                "DIG": {
+                    "count": 707, 
+                    "percentage": 17.0
+                }, 
+                "LMQ": {
+                    "count": 366, 
+                    "percentage": 9.0
+                }, 
+                "EG": {
+                    "count": 1369, 
+                    "percentage": 32.0
+                }, 
+                "CLG": {
+                    "count": 404, 
+                    "percentage": 9.0
+                }, 
+                "C9": {
+                    "count": 431, 
+                    "percentage": 10.0
+                }, 
+                "TSM": {
+                    "count": 715, 
+                    "percentage": 17.0
+                }, 
+                "details": {
+                    "count": 4279, 
+                    "percentage": 7.0
+                }, 
+                "NS": {
+                    "count": 14, 
+                    "percentage": 0.0
+                }, 
+                "COL": {
+                    "count": 131, 
+                    "percentage": 3.0
+                }
+            }, 
+            "4": {}
+        }, 
+        "COL": {
+            "5": {}, 
+            "4": {
+                "GV": {
+                    "count": 151, 
+                    "percentage": 17.0
+                }, 
+                "DIG": {
+                    "count": 15, 
+                    "percentage": 2.0
+                }, 
+                "T8": {
+                    "count": 94, 
+                    "percentage": 10.0
+                }, 
+                "CLG": {
+                    "count": 139, 
+                    "percentage": 15.0
+                }, 
+                "TIP": {
+                    "count": 20, 
+                    "percentage": 2.0
+                }, 
+                "WFX": {
+                    "count": 131, 
+                    "percentage": 14.0
+                }, 
+                "C9": {
+                    "count": 79, 
+                    "percentage": 9.0
+                }, 
+                "TSM": {
+                    "count": 104, 
+                    "percentage": 11.0
+                }, 
+                "details": {
+                    "count": 905, 
+                    "percentage": 1.0
+                }, 
+                "CST": {
+                    "count": 29, 
+                    "percentage": 3.0
+                }, 
+                "NS": {
+                    "count": 17, 
+                    "percentage": 2.0
+                }, 
+                "TL": {
+                    "count": 126, 
+                    "percentage": 14.0
+                }
+            }
+        }, 
+        "TL": {
+            "5": {
+                "CRS": {
+                    "count": 2966, 
+                    "percentage": 39.0
+                }, 
+                "DIG": {
+                    "count": 790, 
+                    "percentage": 10.0
+                }, 
+                "LMQ": {
+                    "count": 588, 
+                    "percentage": 8.0
+                }, 
+                "EG": {
+                    "count": 393, 
+                    "percentage": 5.0
+                }, 
+                "CLG": {
+                    "count": 643, 
+                    "percentage": 8.0
+                }, 
+                "C9": {
+                    "count": 812, 
+                    "percentage": 11.0
+                }, 
+                "TSM": {
+                    "count": 1255, 
+                    "percentage": 16.0
+                }, 
+                "details": {
+                    "count": 7614, 
+                    "percentage": 12.0
+                }, 
+                "NS": {
+                    "count": 41, 
+                    "percentage": 1.0
+                }, 
+                "COL": {
+                    "count": 126, 
+                    "percentage": 2.0
+                }
+            }, 
+            "4": {}
+        }, 
+        "C9": {
+            "5": {
+                "CRS": {
+                    "count": 123, 
+                    "percentage": 1.0
+                }, 
+                "DIG": {
+                    "count": 541, 
+                    "percentage": 6.0
+                }, 
+                "LMQ": {
+                    "count": 219, 
+                    "percentage": 2.0
+                }, 
+                "EG": {
+                    "count": 274, 
+                    "percentage": 3.0
+                }, 
+                "CLG": {
+                    "count": 318, 
+                    "percentage": 4.0
+                }, 
+                "C9": {
+                    "count": 6707, 
+                    "percentage": 75.0
+                }, 
+                "TSM": {
+                    "count": 673, 
+                    "percentage": 8.0
+                }, 
+                "details": {
+                    "count": 8958, 
+                    "percentage": 14.0
+                }, 
+                "NS": {
+                    "count": 24, 
+                    "percentage": 0.0
+                }, 
+                "COL": {
+                    "count": 79, 
+                    "percentage": 1.0
+                }
+            }, 
+            "4": {
+                "GV": {
+                    "count": 299, 
+                    "percentage": 3.0
+                }, 
+                "DIG": {
+                    "count": 8, 
+                    "percentage": 0.0
+                }, 
+                "T8": {
+                    "count": 112, 
+                    "percentage": 1.0
+                }, 
+                "CLG": {
+                    "count": 945, 
+                    "percentage": 10.0
+                }, 
+                "TIP": {
+                    "count": 64, 
+                    "percentage": 1.0
+                }, 
+                "WFX": {
+                    "count": 431, 
+                    "percentage": 4.0
+                }, 
+                "C9": {
+                    "count": 6707, 
+                    "percentage": 68.0
+                }, 
+                "TSM": {
+                    "count": 354, 
+                    "percentage": 4.0
+                }, 
+                "details": {
+                    "count": 9864, 
+                    "percentage": 15.0
+                }, 
+                "CST": {
+                    "count": 69, 
+                    "percentage": 1.0
+                }, 
+                "NS": {
+                    "count": 63, 
+                    "percentage": 1.0
+                }, 
+                "TL": {
+                    "count": 812, 
+                    "percentage": 8.0
+                }
+            }
+        }, 
+        "NS": {
+            "5": {
+                "CRS": {
+                    "count": 24, 
+                    "percentage": 5.0
+                }, 
+                "DIG": {
+                    "count": 69, 
+                    "percentage": 15.0
+                }, 
+                "LMQ": {
+                    "count": 41, 
+                    "percentage": 9.0
+                }, 
+                "EG": {
+                    "count": 63, 
+                    "percentage": 14.0
+                }, 
+                "CLG": {
+                    "count": 73, 
+                    "percentage": 16.0
+                }, 
+                "C9": {
+                    "count": 63, 
+                    "percentage": 14.0
+                }, 
+                "TSM": {
+                    "count": 107, 
+                    "percentage": 23.0
+                }, 
+                "details": {
+                    "count": 457, 
+                    "percentage": 1.0
+                }, 
+                "NS": {
+                    "count": 0, 
+                    "percentage": 0.0
+                }, 
+                "COL": {
+                    "count": 17, 
+                    "percentage": 4.0
+                }
+            }, 
+            "4": {
+                "GV": {
+                    "count": 20, 
+                    "percentage": 11.0
+                }, 
+                "DIG": {
+                    "count": 2, 
+                    "percentage": 1.0
+                }, 
+                "T8": {
+                    "count": 7, 
+                    "percentage": 4.0
+                }, 
+                "CLG": {
+                    "count": 36, 
+                    "percentage": 19.0
+                }, 
+                "TIP": {
+                    "count": 7, 
+                    "percentage": 4.0
+                }, 
+                "WFX": {
+                    "count": 14, 
+                    "percentage": 7.0
+                }, 
+                "C9": {
+                    "count": 24, 
+                    "percentage": 13.0
+                }, 
+                "TSM": {
+                    "count": 25, 
+                    "percentage": 13.0
+                }, 
+                "details": {
+                    "count": 190, 
+                    "percentage": 0.0
+                }, 
+                "CST": {
+                    "count": 14, 
+                    "percentage": 7.0
+                }, 
+                "NS": {
+                    "count": 0, 
+                    "percentage": 0.0
+                }, 
+                "TL": {
+                    "count": 41, 
+                    "percentage": 22.0
+                }
+            }
+        }, 
+        "GV": {
+            "5": {
+                "CRS": {
+                    "count": 726, 
+                    "percentage": 29.0
+                }, 
+                "DIG": {
+                    "count": 376, 
+                    "percentage": 15.0
+                }, 
+                "LMQ": {
+                    "count": 153, 
+                    "percentage": 6.0
+                }, 
+                "EG": {
+                    "count": 209, 
+                    "percentage": 8.0
+                }, 
+                "CLG": {
+                    "count": 162, 
+                    "percentage": 7.0
+                }, 
+                "C9": {
+                    "count": 299, 
+                    "percentage": 12.0
+                }, 
+                "TSM": {
+                    "count": 367, 
+                    "percentage": 15.0
+                }, 
+                "details": {
+                    "count": 2463, 
+                    "percentage": 4.0
+                }, 
+                "NS": {
+                    "count": 20, 
+                    "percentage": 1.0
+                }, 
+                "COL": {
+                    "count": 151, 
+                    "percentage": 6.0
+                }
+            }, 
+            "4": {}
+        }, 
+        "T8": {
+            "5": {
+                "CRS": {
+                    "count": 46, 
+                    "percentage": 5.0
+                }, 
+                "DIG": {
+                    "count": 207, 
+                    "percentage": 23.0
+                }, 
+                "LMQ": {
+                    "count": 97, 
+                    "percentage": 11.0
+                }, 
+                "EG": {
+                    "count": 77, 
+                    "percentage": 8.0
+                }, 
+                "CLG": {
+                    "count": 57, 
+                    "percentage": 6.0
+                }, 
+                "C9": {
+                    "count": 112, 
+                    "percentage": 12.0
+                }, 
+                "TSM": {
+                    "count": 209, 
+                    "percentage": 23.0
+                }, 
+                "details": {
+                    "count": 906, 
+                    "percentage": 1.0
+                }, 
+                "NS": {
+                    "count": 7, 
+                    "percentage": 1.0
+                }, 
+                "COL": {
+                    "count": 94, 
+                    "percentage": 10.0
+                }
+            }, 
+            "4": {}
+        }, 
+        "EG": {
+            "5": {}, 
+            "4": {
+                "GV": {
+                    "count": 209, 
+                    "percentage": 6.0
+                }, 
+                "DIG": {
+                    "count": 7, 
+                    "percentage": 0.0
+                }, 
+                "T8": {
+                    "count": 77, 
+                    "percentage": 2.0
+                }, 
+                "CLG": {
+                    "count": 481, 
+                    "percentage": 15.0
+                }, 
+                "TIP": {
+                    "count": 32, 
+                    "percentage": 1.0
+                }, 
+                "WFX": {
+                    "count": 1369, 
+                    "percentage": 42.0
+                }, 
+                "C9": {
+                    "count": 274, 
+                    "percentage": 8.0
+                }, 
+                "TSM": {
+                    "count": 220, 
+                    "percentage": 7.0
+                }, 
+                "details": {
+                    "count": 3253, 
+                    "percentage": 5.0
+                }, 
+                "CST": {
+                    "count": 128, 
+                    "percentage": 4.0
+                }, 
+                "NS": {
+                    "count": 63, 
+                    "percentage": 2.0
+                }, 
+                "TL": {
+                    "count": 393, 
+                    "percentage": 12.0
+                }
+            }
+        }, 
+        "CLG": {
+            "5": {
+                "CRS": {
+                    "count": 242, 
+                    "percentage": 1.0
+                }, 
+                "DIG": {
+                    "count": 1516, 
+                    "percentage": 9.0
+                }, 
+                "LMQ": {
+                    "count": 422, 
+                    "percentage": 2.0
+                }, 
+                "EG": {
+                    "count": 481, 
+                    "percentage": 3.0
+                }, 
+                "CLG": {
+                    "count": 12076, 
+                    "percentage": 71.0
+                }, 
+                "C9": {
+                    "count": 945, 
+                    "percentage": 6.0
+                }, 
+                "TSM": {
+                    "count": 1163, 
+                    "percentage": 7.0
+                }, 
+                "details": {
+                    "count": 17020, 
+                    "percentage": 26.0
+                }, 
+                "NS": {
+                    "count": 36, 
+                    "percentage": 0.0
+                }, 
+                "COL": {
+                    "count": 139, 
+                    "percentage": 1.0
+                }
+            }, 
+            "4": {
+                "GV": {
+                    "count": 162, 
+                    "percentage": 1.0
+                }, 
+                "DIG": {
+                    "count": 8, 
+                    "percentage": 0.0
+                }, 
+                "T8": {
+                    "count": 57, 
+                    "percentage": 0.0
+                }, 
+                "CLG": {
+                    "count": 12076, 
+                    "percentage": 84.0
+                }, 
+                "TIP": {
+                    "count": 60, 
+                    "percentage": 0.0
+                }, 
+                "WFX": {
+                    "count": 404, 
+                    "percentage": 3.0
+                }, 
+                "C9": {
+                    "count": 318, 
+                    "percentage": 2.0
+                }, 
+                "TSM": {
+                    "count": 540, 
+                    "percentage": 4.0
+                }, 
+                "details": {
+                    "count": 14385, 
+                    "percentage": 22.0
+                }, 
+                "CST": {
+                    "count": 44, 
+                    "percentage": 0.0
+                }, 
+                "NS": {
+                    "count": 73, 
+                    "percentage": 1.0
+                }, 
+                "TL": {
+                    "count": 643, 
+                    "percentage": 4.0
+                }
+            }
+        }, 
+        "CST": {
+            "5": {
+                "CRS": {
+                    "count": 37, 
+                    "percentage": 8.0
+                }, 
+                "DIG": {
+                    "count": 69, 
+                    "percentage": 14.0
+                }, 
+                "LMQ": {
+                    "count": 38, 
+                    "percentage": 8.0
+                }, 
+                "EG": {
+                    "count": 128, 
+                    "percentage": 26.0
+                }, 
+                "CLG": {
+                    "count": 44, 
+                    "percentage": 9.0
+                }, 
+                "C9": {
+                    "count": 69, 
+                    "percentage": 14.0
+                }, 
+                "TSM": {
+                    "count": 65, 
+                    "percentage": 13.0
+                }, 
+                "details": {
+                    "count": 493, 
+                    "percentage": 1.0
+                }, 
+                "NS": {
+                    "count": 14, 
+                    "percentage": 3.0
+                }, 
+                "COL": {
+                    "count": 29, 
+                    "percentage": 6.0
+                }
+            }, 
+            "4": {}
+        }, 
+        "LMQ": {
+            "5": {}, 
+            "4": {
+                "GV": {
+                    "count": 153, 
+                    "percentage": 6.0
+                }, 
+                "DIG": {
+                    "count": 9, 
+                    "percentage": 0.0
+                }, 
+                "T8": {
+                    "count": 97, 
+                    "percentage": 4.0
+                }, 
+                "CLG": {
+                    "count": 422, 
+                    "percentage": 17.0
+                }, 
+                "TIP": {
+                    "count": 398, 
+                    "percentage": 16.0
+                }, 
+                "WFX": {
+                    "count": 366, 
+                    "percentage": 14.0
+                }, 
+                "C9": {
+                    "count": 219, 
+                    "percentage": 9.0
+                }, 
+                "TSM": {
+                    "count": 218, 
+                    "percentage": 9.0
+                }, 
+                "details": {
+                    "count": 2549, 
+                    "percentage": 4.0
+                }, 
+                "CST": {
+                    "count": 38, 
+                    "percentage": 1.0
+                }, 
+                "NS": {
+                    "count": 41, 
+                    "percentage": 2.0
+                }, 
+                "TL": {
+                    "count": 588, 
+                    "percentage": 23.0
+                }
+            }
+        }
+    }
+}
