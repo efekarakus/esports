@@ -113,6 +113,14 @@ d3.sankey = function() {
         d3.sum(node.targetLinks, value)
       );
     });
+
+    nodes.forEach(function(node) {
+      var sum = nodes.reduce(function(p, c, i, a) {
+        return c.season === node.season ? p + c.value : p;
+      }, 0);
+
+      node.percentage = Math.round( node.value/sum * 100.0 );
+    });
   }
 
   // Iteratively assign the breadth (x-position) for each node.

@@ -1,7 +1,9 @@
 function flow() {
 	var margin = {top: 0, right: 0, bottom: 0, left: 0},
 		width = 700,
-		height = 800;
+		height = 850,
+		pWidth = 35,
+		pHeight = 25;
 
 	var colors = {
 		"TSM": "#FFF",
@@ -36,7 +38,8 @@ function flow() {
 
 	function chart(selection) {
 
-		var highlight = function(d, link) {
+		var highlight = function(d, link, percentage) {
+			var node = d;
 			var name = d.name;
 			var season = d.season;
 
@@ -53,6 +56,35 @@ function flow() {
 					else return 0.1;
 				});
 
+			percentage.transition().duration(300)
+				.select("text")
+				.text(function(d) { 
+					if (node.season === 4) {
+						for (var i = 0; i < node.sourceLinks.length; i++) {
+							var l = node.sourceLinks[i];
+
+							if (l.target.name === d.name && d.season === 5) {
+								return Math.round(l.value/node.value * 100) + "%";
+							}
+						}
+
+						return ""; 
+					} else {
+						for (var i = 0; i < node.targetLinks.length; i++) {
+							var l = node.targetLinks[i];
+
+							if (l.source.name === d.name && d.season === 4) {
+								return Math.round(l.value/node.value * 100) + "%";
+							}
+						}
+						return "";
+					}
+				});
+
+			percentage.transition().duration(300)
+				.select("rect")
+					.style("stroke-opacity", function(d) { return d.season === season ? 0.0 : 1.0; } )
+					.style("fill-opacity", function(d) { return d.season === season ? 0.0 : 1.0; });
 		}
 
 		selection.each(function(data) {
@@ -67,7 +99,7 @@ function flow() {
 				.nodePadding(40)
 				.width(width)
 				.height(height)
-				.size([width, height]);
+				.size([width, height - 50]);
 
 			var path = sankey.link();
 
@@ -75,6 +107,7 @@ function flow() {
 				.nodes(data.nodes)
 				.links(data.links)
 				.layout(10);
+
 
 			var link = svg.append("g").selectAll(".link")
 				.data(data.links)
@@ -99,8 +132,42 @@ function flow() {
 				.style("fill", function(d) { return colors[d.name]; })
 				.style("fill-opacity", 1.0);
 
-			node.on("mouseover", function(d) { highlight(d, link); })
-				.on("mouseout", function() { link.transition().duration(400).style("stroke", "#FFF").style("stroke-opacity", .3); });
+			var percentage = node.append("g");
+
+
+			percentage.append("rect")
+				.attr("x", function(d) { return d.season === 4 ? sankey.nodeWidth() + 10 : -pWidth - 10; })
+				.attr("y", function(d) { return d.dy/2 - pHeight/2; })
+				.attr("width", pWidth)
+				.attr("height", pHeight)
+				.attr("rx", 5)
+				.attr("ry", 5)
+				.style("fill", "#fff")
+				.style("stroke", "#000");
+
+			percentage.append("text")
+				.attr("x", function(d) {
+					return d.season === 4 ? sankey.nodeWidth() + 13 : -pWidth - 5; 
+				})
+				.attr("y", function(d) { return d.dy/2 + 5; })
+				.text(function(d) { return d.percentage + "%"; });
+
+
+			node.on("mouseover", function(d) { highlight(d, link, percentage); })
+				.on("mouseout", function() { 
+					link.transition().duration(400)
+						.style("stroke", "#FFF")
+						.style("stroke-opacity", .3); 
+
+					percentage.transition().duration(300)
+						.select("rect")
+						.style("stroke-opacity", 1.0)
+						.style("fill-opacity", 1.0);
+
+					percentage.transition().duration(300)
+						.select("text")
+						.text(function(d) { return d.percentage + "%"; });
+			});
 
 			// --- LOGOS ---
 			function drawLogos(season, root) {
@@ -125,8 +192,21 @@ function flow() {
 					.attr("width", logoSize)
 					.attr("height", logoSize)
 					.attr("class", "logo")
-					.on("mouseover", function(d) { highlight(d, link); })
-					.on("mouseout", function() { link.transition().duration(400).style("stroke", "#FFF").style("stroke-opacity", .3); });
+					.on("mouseover", function(d) { highlight(d, link, percentage); })
+					.on("mouseout", function() { 
+						link.transition().duration(400)
+							.style("stroke", "#FFF")
+							.style("stroke-opacity", .3); 
+
+						percentage.transition().duration(300)
+							.select("rect")
+							.style("stroke-opacity", 1.0)
+							.style("fill-opacity", 1.0);
+
+						percentage.transition().duration(300)
+							.select("text")
+							.text(function(d) { return d.percentage + "%"; });
+					});
 
 			}
 
