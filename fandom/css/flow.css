@@ -9,24 +9,24 @@
 }
 
 .flow-holder .c.c1 {
-	width: 190px;
+	width: 100px;
 	height: 800px;
 }
 
 .flow-holder .c.c2 {
-	width: 400px;
+	width: 700px;
 	height: 800px;
 }
 
 .flow-holder .c.c3 {
-	width: 190px;
+	width: 100px;
 	height: 800px;
 }
 
 .flow-holder .c .logo {
 	display: block;
-	width: 72px;
-	height: 72px;
+	width: 50px;
+	height: 50px;
 }
 
 .flow-holder .c .logo.text {
@@ -193,14 +193,17 @@
 	fill-opacity: 1.0;
 }
 
-rect.bar {
-	fill: #FFF;
-	fill-opacity: 0.5;
+rect.node {
+	stroke: #000;
+	stroke-width: 1;
+}
+
+rect.node:hover {
+	cursor: pointer;
 }
 
 path.link {
-	stroke: #FFF;
-	stroke-opacity: 0.5;
-	fill: #fff;
-	fill-opacity: 0.1;
+  fill: none;
+  stroke: #fff;
+  stroke-opacity: .3;
 }
