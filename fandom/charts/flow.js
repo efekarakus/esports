@@ -36,6 +36,24 @@ function flow() {
 
 	function chart(selection) {
 
+		var highlight = function(d, link) {
+			var name = d.name;
+			var season = d.season;
+
+			link
+				.style("stroke", function(d) {
+					if (season === 4 && name === d.source.name) return colors[name];
+					else if (season === 5 && name === d.target.name) return colors[name];
+					else return "#FFF";
+				})
+				.style("stroke-opacity", function(d) {
+					if (season === 4 && name === d.source.name) return 1.0;
+					else if (season === 5 && name === d.target.name) return 1.0;
+					else return 0.1;
+				});
+
+		}
+
 		selection.each(function(data) {
 			var svg = d3.select(this)
 				.select(".c.c2")
@@ -45,7 +63,7 @@ function flow() {
 
 			var sankey = d3.sankey()
 				.nodeWidth(20)
-				.nodePadding(25)
+				.nodePadding(40)
 				.width(width)
 				.height(height)
 				.size([width, height]);
@@ -80,45 +98,38 @@ function flow() {
 				.style("fill", function(d) { return colors[d.name]; })
 				.style("fill-opacity", 1.0);
 
-			node.append("text")
-				.attr("x", -6)
-				.attr("y", function(d) { return d.dy / 2; })
-				.attr("dy", ".35em")
-				.attr("text-anchor", "end")
-				.attr("transform", null)
-				.text(function(d) { return d.name; })
-				.filter(function(d) { return d.x < width / 2; })
-				.attr("x", 6 + sankey.nodeWidth())
-				.attr("text-anchor", "start");
+			node.on("mouseover", function(d) { highlight(d, link); })
+				.on("mouseout", function() { link.style("stroke", "#FFF").style("stroke-opacity", .3); });
 
+			function drawLogos(season, root) {
+				root = season === 4 ? root.select(".c.c1") : root.select(".c.c3");
 
-			node.on("mouseover", function(d) {
-				var name = d.name;
-				var season = d.season;
+				var w = 100;
+				var logoSize = 50;
 
-				link
-					.style("stroke", function(d) {
-						if (season === 4 && name === d.source.name) return colors[name];
-						else if (season === 5 && name === d.target.name) return colors[name];
-						else return "#FFF";
-					})
-					.style("stroke-opacity", function(d) {
-						if (season === 4 && name === d.source.name) return 1.0;
-						else if (season === 5 && name === d.target.name) return 1.0;
-						else return 0.1;
-					});
-			});
+				var svg = root.append("svg")
+					.attr("width", w)
+					.attr("height", height + logoSize);
 
+				var logo = svg.selectAll(".logos")
+					.data(data.nodes.filter(function(a) { return a.season === season && a.name !== "NS"; }))
+					.enter()
+						.append("image");
 
-			// draw logos
-			width = 100;
-			svg = d3.select(this)
-				.select(".c.c1")
-				.append("svg")
-				.attr("width", width)
-				.attr("height", height);
+				logo
+					.attr("xlink:href", function(d) { return "./images/" + d.name + ".png"; })
+					.attr("x", function() { return season === 4 ? w - logoSize : 0; })
+					.attr("y", function(d) { return d.y + d.dy/2 - logoSize/2; })
+					.attr("width", logoSize)
+					.attr("height", logoSize)
+					.attr("class", "logo")
+					.on("mouseover", function(d) { highlight(d, link); })
+					.on("mouseout", function() { link.style("stroke", "#FFF").style("stroke-opacity", .3); });
 
-			
+			}
+
+			drawLogos(4, d3.select(this));
+			drawLogos(5, d3.select(this));
 
 		});
 	}
