@@ -41,6 +41,7 @@ function flow() {
 			var season = d.season;
 
 			link
+				.transition().duration(400)
 				.style("stroke", function(d) {
 					if (season === 4 && name === d.source.name) return colors[name];
 					else if (season === 5 && name === d.target.name) return colors[name];
@@ -99,8 +100,9 @@ function flow() {
 				.style("fill-opacity", 1.0);
 
 			node.on("mouseover", function(d) { highlight(d, link); })
-				.on("mouseout", function() { link.style("stroke", "#FFF").style("stroke-opacity", .3); });
+				.on("mouseout", function() { link.transition().duration(400).style("stroke", "#FFF").style("stroke-opacity", .3); });
 
+			// --- LOGOS ---
 			function drawLogos(season, root) {
 				root = season === 4 ? root.select(".c.c1") : root.select(".c.c3");
 
@@ -124,7 +126,7 @@ function flow() {
 					.attr("height", logoSize)
 					.attr("class", "logo")
 					.on("mouseover", function(d) { highlight(d, link); })
-					.on("mouseout", function() { link.style("stroke", "#FFF").style("stroke-opacity", .3); });
+					.on("mouseout", function() { link.transition().duration(400).style("stroke", "#FFF").style("stroke-opacity", .3); });
 
 			}
 
