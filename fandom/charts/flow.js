@@ -74,7 +74,7 @@ function flow() {
 			sankey
 				.nodes(data.nodes)
 				.links(data.links)
-				.layout(32);
+				.layout(10);
 
 			var link = svg.append("g").selectAll(".link")
 				.data(data.links)
