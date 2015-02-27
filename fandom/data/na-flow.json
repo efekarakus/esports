@@ -2,82 +2,102 @@
     "nodes": [
         {
             "season": 4, 
+            "fullname": "Counter Logic Gaming", 
             "name": "CLG"
         }, 
         {
             "season": 4, 
+            "fullname": "Curse", 
             "name": "CRS"
         }, 
         {
             "season": 4, 
+            "fullname": "Team Dignitas", 
             "name": "DIG"
         }, 
         {
             "season": 4, 
+            "fullname": "LMQ", 
             "name": "LMQ"
         }, 
         {
             "season": 4, 
+            "fullname": "Cloud9", 
             "name": "C9"
         }, 
         {
             "season": 4, 
+            "fullname": "Team SoloMid", 
             "name": "TSM"
         }, 
         {
             "season": 4, 
+            "fullname": "compLexity Black", 
             "name": "COL"
         }, 
         {
             "season": 4, 
+            "fullname": "Evil Geniuses", 
             "name": "EG"
         }, 
         {
             "season": 4, 
+            "fullname": "empty", 
             "name": "NS"
         }, 
         {
             "season": 5, 
+            "fullname": "Counter Logic Gaming", 
             "name": "CLG"
         }, 
         {
             "season": 5, 
+            "fullname": "Team Coast", 
             "name": "CST"
         }, 
         {
             "season": 5, 
+            "fullname": "Team Dignitas", 
             "name": "DIG"
         }, 
         {
             "season": 5, 
+            "fullname": "Gravity", 
             "name": "GV"
         }, 
         {
             "season": 5, 
+            "fullname": "Cloud9", 
             "name": "C9"
         }, 
         {
             "season": 5, 
+            "fullname": "Team Impulse", 
             "name": "TIP"
         }, 
         {
             "season": 5, 
+            "fullname": "Team 8", 
             "name": "T8"
         }, 
         {
             "season": 5, 
+            "fullname": "Team SoloMid", 
             "name": "TSM"
         }, 
         {
             "season": 5, 
+            "fullname": "Winterfox", 
             "name": "WFX"
         }, 
         {
             "season": 5, 
+            "fullname": "Team Liquid", 
             "name": "TL"
         }, 
         {
             "season": 5, 
+            "fullname": "empty", 
             "name": "NS"
         }
     ], 

@@ -21,8 +21,9 @@ EU_S5_TEAMS = set(["Fnatic", "SK Gaming", "Elements", "GIANTS GAMING",
 "H2k", "Unicorns of Love", "Copenhagen Wolves", "Meet Your Makers", "ROCCAT", "Gambit Gaming", "empty"])
 
 class Team:
-    def __init__(self, name, season):
+    def __init__(self, name, fullname, season):
         self.name = name
+        self.fullname = fullname
         self.season = int(season)
     
     def __hash__(self):
@@ -37,6 +38,7 @@ class Team:
     def to_obj(self):
         return {
             "name": self.name,
+            "fullname": self.fullname,
             "season": self.season
         }
 
@@ -77,20 +79,20 @@ def nodes(region):
     nodes = []
     if region == "na":
         for name in NA_S4_TEAMS:
-            name = abbr(name)
-            nodes.append(Team(name, 4))
+            a = abbr(name)
+            nodes.append(Team(a, name, 4))
 
         for name in NA_S5_TEAMS:
-            name = abbr(name)
-            nodes.append(Team(name, 5))
+            a = abbr(name)
+            nodes.append(Team(a, name, 5))
     else:
         for name in EU_S4_TEAMS:
-            name = abbr(name)
-            nodes.append(Team(name, 4))
+            a = abbr(name)
+            nodes.append(Team(a, name, 4))
         
         for name in EU_S5_TEAMS:
-            name = abbr(name)
-            nodes.append(Team(name, 5))
+            a = abbr(name)
+            nodes.append(Team(a, name, 5))
 
     return nodes
 

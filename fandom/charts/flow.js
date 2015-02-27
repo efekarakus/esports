@@ -129,6 +129,9 @@ function flow() {
 				.attr("height", function(d) { return d.dy; })
 				.attr("width", sankey.nodeWidth())
 				.attr("class", "node")
+				.attr("data-name", function(d) { return d.name; })
+				.attr("data-fullname", function(d) { return d.fullname; })
+				.attr("data-count", function(d) { return d.value; })
 				.style("fill", function(d) { return colors[d.name]; })
 				.style("fill-opacity", 1.0);
 
@@ -192,6 +195,9 @@ function flow() {
 					.attr("width", logoSize)
 					.attr("height", logoSize)
 					.attr("class", "logo")
+					.attr("data-name", function(d) { return d.name; })
+					.attr("data-fullname", function(d) { return d.fullname; })
+					.attr("data-count", function(d) { return d.value; })
 					.on("mouseover", function(d) { highlight(d, link, percentage); })
 					.on("mouseout", function() { 
 						link.transition().duration(400)
@@ -207,11 +213,43 @@ function flow() {
 							.select("text")
 							.text(function(d) { return d.percentage + "%"; });
 					});
-
 			}
 
 			drawLogos(4, d3.select(this));
 			drawLogos(5, d3.select(this));
+
+			function buildTooltip(elem) {
+				var title = "";
+				if ($(elem).data("fullname") === "empty") {
+					title = "No Support";
+				} else {
+					title = $(elem).data("fullname") + " (" + $(elem).data("name") + ")";
+				}
+				var count = $(elem).data("count");
+
+				$(elem).qtip({
+					content: {
+						title: title,
+						text: "Count: " + count
+					},
+					style: {
+						classes: "qtip-dark qtip-shadow"
+					},
+					position: {
+						target: "mouse",
+						adjust: {x: 10, y: 20}
+					}
+				});
+			}
+
+			// tooltips
+			$("image.logo").each(function() {
+				buildTooltip(this);
+			});
+
+			$("rect.node").each(function() {
+				buildTooltip(this);
+			})
 
 		});
 	}

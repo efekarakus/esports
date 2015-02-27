@@ -2,82 +2,102 @@
     "nodes": [
         {
             "season": 4, 
+            "fullname": "SK Gaming", 
             "name": "SK"
         }, 
         {
             "season": 4, 
+            "fullname": "ROCCAT", 
             "name": "ROC"
         }, 
         {
             "season": 4, 
+            "fullname": "Alliance", 
             "name": "ALL"
         }, 
         {
             "season": 4, 
+            "fullname": "Millenium", 
             "name": "MIL"
         }, 
         {
             "season": 4, 
+            "fullname": "Copenhagen Wolves", 
             "name": "CW"
         }, 
         {
             "season": 4, 
+            "fullname": "Supa Hot Crew", 
             "name": "SHC"
         }, 
         {
             "season": 4, 
+            "fullname": "Gambit Gaming", 
             "name": "GMB"
         }, 
         {
             "season": 4, 
+            "fullname": "Fnatic", 
             "name": "FNC"
         }, 
         {
             "season": 4, 
+            "fullname": "empty", 
             "name": "NS"
         }, 
         {
             "season": 5, 
+            "fullname": "SK Gaming", 
             "name": "SK"
         }, 
         {
             "season": 5, 
+            "fullname": "ROCCAT", 
             "name": "ROC"
         }, 
         {
             "season": 5, 
+            "fullname": "Elements", 
             "name": "EL"
         }, 
         {
             "season": 5, 
+            "fullname": "H2k", 
             "name": "H2K"
         }, 
         {
             "season": 5, 
+            "fullname": "Copenhagen Wolves", 
             "name": "CW"
         }, 
         {
             "season": 5, 
+            "fullname": "Meet Your Makers", 
             "name": "MYM"
         }, 
         {
             "season": 5, 
+            "fullname": "Unicorns of Love", 
             "name": "UOL"
         }, 
         {
             "season": 5, 
+            "fullname": "GIANTS GAMING", 
             "name": "GIA"
         }, 
         {
             "season": 5, 
+            "fullname": "Gambit Gaming", 
             "name": "GMB"
         }, 
         {
             "season": 5, 
+            "fullname": "Fnatic", 
             "name": "FNC"
         }, 
         {
             "season": 5, 
+            "fullname": "empty", 
             "name": "NS"
         }
     ], 
