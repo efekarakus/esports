@@ -68,7 +68,8 @@ a:hover {
 }
 
 .vis .cell {
-    background: #000;
+    background: #191919;
+    border: 1px solid black;
     border-radius: 5px;
     display: inline-block;
     margin-left: 20px;
