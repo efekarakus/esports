@@ -43,6 +43,7 @@ a:hover {
 .author {
 	margin: 0 auto;
 	width: 540px;
+    margin-bottom: 50px;
 }
 
 .author a {
@@ -52,7 +53,6 @@ a:hover {
 .content {
 	width: 540px;
 	margin: 0 auto;
-	margin-top: 50px;
 }
 
 .content p.footnotes {

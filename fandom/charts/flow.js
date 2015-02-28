@@ -130,6 +130,7 @@ function flow() {
 				.attr("width", sankey.nodeWidth())
 				.attr("class", "node")
 				.attr("data-name", function(d) { return d.name; })
+				.attr("data-season", function(d) { return d.season; })
 				.attr("data-fullname", function(d) { return d.fullname; })
 				.attr("data-count", function(d) { return d.value; })
 				.style("fill", function(d) { return colors[d.name]; })
@@ -196,6 +197,7 @@ function flow() {
 					.attr("height", logoSize)
 					.attr("class", "logo")
 					.attr("data-name", function(d) { return d.name; })
+					.attr("data-season", function(d) { return d.season; })
 					.attr("data-fullname", function(d) { return d.fullname; })
 					.attr("data-count", function(d) { return d.value; })
 					.on("mouseover", function(d) { highlight(d, link, percentage); })
@@ -226,6 +228,7 @@ function flow() {
 					title = $(elem).data("fullname") + " (" + $(elem).data("name") + ")";
 				}
 				var count = $(elem).data("count");
+				var season = $(elem).data("season");
 
 				$(elem).qtip({
 					content: {
