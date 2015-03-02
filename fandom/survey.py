@@ -56,6 +56,8 @@ def get_flows(data):
         's4': {},
         's5': {}
     }
+    na_empty = 0
+    eu_empty = 0
     for entry in data:
         na_s4 = entry[0] if entry[0] != "" else "empty"
         na_s5 = entry[1] if entry[1] != "" else "empty"
@@ -81,6 +83,8 @@ def get_flows(data):
             else:
                 na['s5'][na_s5]['count'] += 1
                 na['s5'][na_s5][na_s4] += 1
+        else:
+            na_empty += 1
 
         if eu_s4 != "empty" or eu_s5 != "empty":
             if not eu_s4 in eu['s4']:
@@ -100,8 +104,12 @@ def get_flows(data):
             else:
                 eu['s5'][eu_s5]['count'] += 1
                 eu['s5'][eu_s5][eu_s4] += 1
+        else:
+            eu_empty += 1
 
 
+    print "na_empty: ", na_empty
+    print "eu_empty: ", eu_empty
     return (na, eu)
 
 def get_overall_stats(region):
@@ -170,14 +178,14 @@ def print_top_counts(region, title):
 
 data = get_data()
 (na, eu) = get_flows(data)
-na_overall = get_overall_stats(na)
-eu_overall = get_overall_stats(eu)
+#na_overall = get_overall_stats(na)
+#eu_overall = get_overall_stats(eu)
 
 #print_retention(na, 'na')
 #print_retention(eu, 'eu')
 
-print_top_counts(na, "NA")
-print_top_counts(eu, "EU")
+#print_top_counts(na, "NA")
+#print_top_counts(eu, "EU")
 
 #tojson('na', na)
 #tojson('eu', eu)
