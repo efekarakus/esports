@@ -34,7 +34,7 @@ class URL:
 
 class Team:
     @staticmethod
-    def crawl(region, week, date, teamA, teamB, game_id, game_hash):
+    def crawl(region, week, date, teamA, teamB, game_number, game_id, game_hash):
         path = "%s/%d/%s/" % (region, week, date)
         if not os.path.exists(path):
             os.makedirs(path)
@@ -46,10 +46,14 @@ class Team:
         time.sleep(SLEEP_DELAY)
         timeline = json.loads( urllib.urlopen(url.get_timeline_url()).read() )
 
-        with open(path + ("%s-%s.json" % (teamA, teamB)), "w") as f:
+        details = ""
+        if game_number != '':
+            details = "-game%s" % (game_number)
+
+        with open(path + ("%s-%s%s.json" % (teamA, teamB, details)), "w") as f:
             json.dump(overview, f, indent=4)
 
-        with open(path + ("%s-%s-timeline.json" % (teamA, teamB)), "w") as f:
+        with open(path + ("%s-%s%s-timeline.json" % (teamA, teamB, details)), "w") as f:
             json.dump(timeline, f, indent=4)
 
 class Date:
@@ -79,10 +83,11 @@ class Games:
             date = game["date"]
             teamA = game["teamA"]
             teamB = game["teamB"]
+            gnumber = game["gamenumber"]
             gid = game["id"]
             ghash = game["hash"]
 
-            Team.crawl(region, week, date, teamA, teamB, gid, ghash)
+            Team.crawl(region, week, date, teamA, teamB, gnumber, gid, ghash)
             time.sleep(SLEEP_DELAY)
 
 def games(path):
@@ -97,11 +102,17 @@ def games(path):
                 "date": row[2],
                 "teamA": row[3],
                 "teamB": row[4],
-                "id": row[5],
-                "hash": row[6],
+                "gamenumber": row[5],
+                "id": row[6],
+                "hash": row[7],
             })
     return games
 
 if __name__=="__main__":
     games = games(GAMES_PATH)
-    Games.crawl(games)
+
+    # Crawl all the dataset
+    #Games.crawl(games)
+
+    # Crawl only a week
+    Week.crawl("EU", 7, games)
