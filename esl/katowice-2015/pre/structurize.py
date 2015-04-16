@@ -1,5 +1,7 @@
-from datetime import timedelta
-
+import sys, os, getopt
+import csv
+from dateutil.parser import parse
+from datetime import datetime, timedelta
 
 types = ["break", "analysis", "game"]
 
@@ -250,7 +252,8 @@ timeline = {
                 "end": (12, 9, 26)
             }
         ],
-        2: [{
+        2: [
+            {
                 "type": 0,
                 "start": (0, 0, 0),
                 "end": (0, 22, 8)
@@ -501,6 +504,201 @@ timeline = {
                 "start": (10, 39, 28),
                 "end": (10, 44, 38)
             }
+        ],
+        3: [
+            {
+                "type": 0,
+                "start": (0, 0, 0),
+                "end": (0, 24, 48)
+            },
+            {
+                "type": 1,
+                "start": (0, 24, 48),
+                "end": (0, 40, 28)
+            },
+            {
+                "type": 0,
+                "start": (0, 40, 28),
+                "end": (0, 44, 5)
+            },
+            {
+                "type": 1,
+                "start": (0, 44, 5),
+                "end": (0, 59, 39)
+            },
+            {
+                "type": 0,
+                "start": (0, 59, 39),
+                "end": (1, 2, 59)
+            },
+            {
+                "type": 1,
+                "start": (1, 2, 59),
+                "end": (1, 5, 52)
+            },
+            {
+                "type": 2,
+                "teamA": "TSM Kinguin",
+                "teamB": "Ninjas in Pyjamas",
+                "scoreA": 8,
+                "scoreB": 16,
+                "start": (1, 5, 52),
+                "end": (1, 51, 48)
+            },
+            {
+                "type": 1,
+                "start": (1, 51, 48),
+                "end": (1, 53, 19)
+            },
+            {
+                "type": 0,
+                "start": (1, 53, 19),
+                "end": (2, 3, 55)
+            },
+            {
+                "type": 1,
+                "start": (2, 3, 55),
+                "end": (2, 10, 46)
+            },
+            {
+                "type": 2,
+                "teamA": "Ninjas in Pyjamas",
+                "teamB": "TSM Kinguin",
+                "scoreA": 4,
+                "scoreB": 16,
+                "start": (2,10,46),
+                "end": (2, 49, 52)
+            },
+            {
+                "type": 1,
+                "start": (2, 49, 52),
+                "end": (2, 51, 10)
+            },
+            {
+                "type": 0,
+                "start": (2, 51, 10),
+                "end": (3, 1, 57)
+            },
+            {
+                "type": 1,
+                "start": (3, 1, 57),
+                "end": (3, 12, 46)
+            },
+            {
+                "type": 2,
+                "teamA": "Ninjas in Pyjamas",
+                "teamB": "TSM Kinguin",
+                "scoreA": 16,
+                "scoreB": 12,
+                "start": (3, 12, 46),
+                "end": (4, 3, 9)
+            },
+            {
+                "type": 1,
+                "start": (4, 3, 9),
+                "end": (4, 13, 21)
+            },
+            {
+                "type": 0,
+                "start": (4, 13, 21),
+                "end": (4, 29, 41)
+            },
+            {
+                "type": 1,
+                "start": (4, 29, 41),
+                "end": (4, 50, 1)
+            },
+            {
+                "type": 2,
+                "teamA": "fnatic",
+                "teamB": "Virtus.Pro",
+                "scoreA": 19,
+                "scoreB": 17,
+                "start": (4, 50, 1),
+                "end": (6, 2, 34)
+            },
+            {
+                "type": 1,
+                "start": (6, 2, 34),
+                "end": (6, 3, 56)
+            },
+            {
+                "type": 0,
+                "start": (6, 3, 56),
+                "end": (6, 19, 13)
+            },
+            {
+                "type": 1,
+                "start": (6, 19, 13),
+                "end": (6, 27, 26)
+            },
+            {
+                "type": 2,
+                "teamA": "fnatic",
+                "teamB": "Virtus.Pro",
+                "scoreA": 16,
+                "scoreB": 8,
+                "start": (6,27, 26),
+                "end": (7, 10, 41)
+            },
+            {
+                "type": 1,
+                "start": (7, 10, 41),
+                "end": (7, 18, 24)
+            },
+            {
+                "type": 0,
+                "start": (7, 18, 24),
+                "end": (7, 42, 45)
+            },
+            {
+                "type": 1,
+                "start": (7, 42, 45),
+                "end": (8, 4, 46)
+            },
+            {
+                "type": 2,
+                "teamA": "TEAM ENVYUS",
+                "teamB": "Ninjas in Pyjamas",
+                "scoreA": 9,
+                "scoreB": 16,
+                "start": (8, 4, 46),
+                "end": (8, 48, 55)
+            },
+            {
+                "type": 1,
+                "start": (8, 48, 55),
+                "end": (8, 51, 11)
+            },
+            {
+                "type": 0,
+                "start": (8, 51, 11),
+                "end": (9, 3, 24)
+            },
+            {
+                "type": 1,
+                "start": (9, 3, 24),
+                "end": (9, 11, 50)
+            },
+            {
+                "type": 2,
+                "teamA": "TEAM ENVYUS",
+                "teamB": "Ninjas in Pyjamas",
+                "scoreA": 10,
+                "scoreB": 16,
+                "start": (9, 11, 50),
+                "end": (9, 51, 21)
+            },
+            {
+                "type": 1,
+                "start": (9, 51, 21),
+                "end": (10, 1, 44)
+            },
+            {
+                "type": 0,
+                "start": (10, 1, 44),
+                "end": (10, 8, 4)
+            }
         ]
     },
     "lol": {}
@@ -547,6 +745,45 @@ def stats(game):
     print "Total Analysis: %d hours, %d minutes, %d seconds" % (analysis_total / 3600, (analysis_total - (int(analysis_total/3600) * 3600))/ 60, analysis_total % 60)
     print "Total Game: %d hours, %d minutes, %d seconds" % (game_total / 3600, (game_total - (int(game_total/3600) * 3600))/ 60, game_total % 60)
 
+def get_streams(path):
+    streams = []
+    with open(path, 'r') as f:
+        reader = csv.reader(f)
+        reader.next()
+        sid = None
+        partials = []
+
+        for row in reader:
+            rid = int(row[0])
+            rstreamer = row[1]
+            rcount = int(row[2])
+            rtime = parse(row[3])
+
+            if sid != rid:
+                if partials:
+                    streams.append(partials)
+                sid = rid
+                partials = []
+
+            partials.append({
+                'id': rid,
+                'streamer': rstreamer,
+                'count': rcount,
+                'timestamp': rtime
+            })
+        if partials:
+            streams.append(partials)
+    return streams
+
+def structurize(streams, game):
+    for partials in streams:
+        sid = partials[0]['id']
+        if not sid in timeline[game]: continue
+
+        timesteps = timeline[game][sid]
+
 
 if __name__ == '__main__':
     stats("csgo")
+
+    structurize(get_streams("esl_csgo-pruned.csv"), "csgo")
