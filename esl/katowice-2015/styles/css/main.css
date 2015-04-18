@@ -3,14 +3,53 @@ body {
 	width: 1200px;
 	margin-top: 100px;
 	margin-bottom: 100px;
-	font-family: 'Open Sans', sans-serif;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	line-height: 150%;
-	color: #000;
+    background-color: #10171F;
 }
 
-h1 {
-	font-size: 25px;
-	line-height: 40px;
-	text-transform: uppercase;
-	color: #1B2638;
+.content {
+    width: 700px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: #3ca3de;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.title h1 {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 800;
+    color: #fff;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #fff; 
+    margin-bottom: 5px;
+}
+
+
+.title .social a {
+    float: right;
+    font-size: 14px;
+}
+
+.writing {
+    color: #CCC;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.writing.first {
+    margin-top: 80px;
+}
+
+.writing h2 {
+    font-size: 20px;
+    font-weight: 800;
+    color: #fff;
 }

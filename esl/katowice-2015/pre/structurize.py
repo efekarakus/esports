@@ -2,8 +2,18 @@ import sys, os, getopt
 import csv
 from dateutil.parser import parse
 from datetime import datetime, timedelta
+import json
 
 types = ["break", "analysis", "game"]
+tournament_dates = {
+    "csgo": {
+        1: "March 12th",
+        2: "March 13th",
+        3: "March 14th",
+        4: "March 15th"
+    }    
+}
+
 
 timeline = {
     "csgo": {
@@ -699,6 +709,95 @@ timeline = {
                 "start": (10, 1, 44),
                 "end": (10, 8, 4)
             }
+        ],
+        4: [
+            {
+                "type": 0,
+                "start": (0, 0, 0),
+                "end": (0, 18, 29)
+            },
+            {
+                "type": 1,
+                "start": (0, 18, 29),
+                "end": (0, 32, 15)
+            },
+            {
+                "type": 0,
+                "start": (0, 32, 15),
+                "end": (0, 36, 28)
+            },
+            {
+                "type": 1,
+                "start": (0, 36, 28),
+                "end": (0, 40, 9)
+            },
+            {
+                "type": 2,
+                "teamA": "fnatic",
+                "teamB": "Ninjas in Pyjamas",
+                "scoreA": 16,
+                "scoreB": 14,
+                "start": (0, 40, 9),
+                "end": (1, 38, 41)
+            },
+            {
+                "type": 1,
+                "start": (1, 38, 41),
+                "end": (1, 41, 16)
+            },
+            {
+                "type": 0,
+                "start": (1, 41, 16),
+                "end": (1, 49, 46)
+            },
+            {
+                "type": 1,
+                "start": (1, 49, 46),
+                "end": (1, 54, 4)
+            },
+            {
+                "type": 2,
+                "teamA": "fnatic",
+                "teamB": "Ninjas in Pyjamas",
+                "scoreA": 10,
+                "scoreB": 16,
+                "start": (1, 54, 4),
+                "end": (2, 38, 24)
+            },
+            {
+                "type": 1,
+                "start": (2, 38, 24),
+                "end": (2, 41, 0)
+            },
+            {
+                "type": 0,
+                "start": (2, 41, 0),
+                "end": (2, 49, 10)
+            },
+            {
+                "type": 1,
+                "start": (2, 49, 10),
+                "end": (2, 51, 52)
+            },
+            {
+                "type": 2,
+                "teamA": "fnatic",
+                "teamB": "Ninjas in Pyjamas",
+                "scoreA": 16,
+                "scoreB": 13,
+                "start": (2, 51, 52),
+                "end": (3, 48, 31)
+            },
+            {
+                "type": 1,
+                "start": (3, 48, 31),
+                "end": (3, 56, 35)
+            },
+            {
+                "type": 0,
+                "start": (3, 56, 35),
+                "end": (4, 0, 50)
+            }
         ]
     },
     "lol": {}
@@ -775,15 +874,77 @@ def get_streams(path):
             streams.append(partials)
     return streams
 
+def get_closest_timestamp(partials, t):
+    closest = datetime(year=2016, month=1, day=1)
+    diff = (closest - t).total_seconds()
+    for partial in partials:
+        timestamp = partial["timestamp"]
+        d = abs((timestamp - t).total_seconds())
+        if d < diff:
+            closest = timestamp
+            diff = d
+    return closest
+
+def get_points(start, end, partials):
+    points = []
+    for partial in partials:
+        timestamp = partial["timestamp"]
+        cstart = get_closest_timestamp(partials, start)
+        cend = get_closest_timestamp(partials, end)
+        if timestamp >= cstart and timestamp <= cend:
+            points.append({
+                    "count": partial["count"],
+                    "timestamp": str(timestamp)
+                })
+    return points
+
 def structurize(streams, game):
+    struc = { "streams": [] }
     for partials in streams:
         sid = partials[0]['id']
+        print sid
+        stream_start = partials[0]["timestamp"]
         if not sid in timeline[game]: continue
 
+        js = {}
+        js["day"] = tournament_dates[game][sid]
+        js["stream_id"] = sid
+        js["areas"] = []
+
         timesteps = timeline[game][sid]
+        for timestep in timesteps:
+            ttype = types[ timestep["type"] ] # break, analysis, or game
+            
+            start = stream_start + timedelta(hours=timestep["start"][0], minutes=timestep["start"][1], seconds=timestep["start"][2])
+            end = stream_start + timedelta(hours=timestep["end"][0], minutes=timestep["end"][1], seconds=timestep["end"][2])
+            
+            points = get_points(start, end, partials)
+
+            if ttype == "game":
+                js["areas"].append({
+                        "type": ttype,
+                        "teamA": timestep["teamA"],
+                        "teamB": timestep["teamB"],
+                        "scoreA": timestep["scoreA"],
+                        "scoreB": timestep["scoreB"],
+                        "points": points
+                    })
+            else:
+                js["areas"].append({
+                        "type": ttype,
+                        "points": points
+                    })
+
+        struc["streams"].append(js)
+    # endfor partials
+    return struc
 
 
 if __name__ == '__main__':
     stats("csgo")
 
-    structurize(get_streams("esl_csgo-pruned.csv"), "csgo")
+    """
+    js = structurize(get_streams("esl_csgo-pruned.csv"), "csgo")
+    with open("esl_csgo.json", "w") as f:
+        json.dump(js, f, indent=4)
+    """
