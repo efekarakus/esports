@@ -5,6 +5,10 @@
 	margin-bottom: 20px;
 }
 
+.c.chart {
+	height: 200px;
+}
+
 .chart text {
 	font: 10px sans-serif;
 	fill: #fff;
@@ -13,7 +17,7 @@
 .chart text.title {
 	font: 20px sans-serif;
 	font-style: bold;
-	fill: #fff;
+	fill: #3ca3de;
 }
 
 .chart .axis path,
@@ -39,6 +43,6 @@
 }
 
 .chart .area.game {
-	fill: #212F40;
+	fill: #3D6899;
 	fill-opacity: 1;
 }
