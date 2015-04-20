@@ -1,6 +1,4 @@
 body {
-	margin: 0 auto;
-	width: 1200px;
 	margin-top: 100px;
 	margin-bottom: 100px;
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
@@ -8,9 +6,9 @@ body {
     background-color: #10171F;
 }
 
-.content {
-    width: 700px;
+.title {
     margin: 0 auto;
+    width: 700px;
 }
 
 a {
@@ -39,6 +37,8 @@ a:hover {
 }
 
 .writing {
+    width: 700px;
+    margin: 0 auto;
     color: #CCC;
     font-size: 14px;
     margin-bottom: 20px;

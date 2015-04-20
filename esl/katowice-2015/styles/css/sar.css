@@ -1,0 +1,44 @@
+.chart {
+	margin: 0 auto;
+	width: 1000px;
+	height: 300px;
+	margin-bottom: 20px;
+}
+
+.chart text {
+	font: 10px sans-serif;
+	fill: #fff;
+}
+
+.chart text.title {
+	font: 20px sans-serif;
+	font-style: bold;
+	fill: #fff;
+}
+
+.chart .axis path,
+.chart .axis line {
+	fill: none;
+	stroke: #fff;
+	shape-rendering: crispEdges;
+}
+
+.chart .area {
+	stroke: #CCC;
+	stroke-width: 1;
+}
+
+.chart .area.break {
+	fill: #212F40;
+	fill-opacity: 0.1;
+}
+
+.chart .area.analysis {
+	fill: #212F40;
+	fill-opacity: 0.3;
+}
+
+.chart .area.game {
+	fill: #212F40;
+	fill-opacity: 1;
+}

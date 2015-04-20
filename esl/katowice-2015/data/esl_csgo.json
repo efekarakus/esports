@@ -2,7 +2,7 @@
     "streams": [
         {
             "stream_id": 1, 
-            "day": "March 12th", 
+            "day": "March 12th (Group Stage)", 
             "areas": [
                 {
                     "points": [
@@ -3295,7 +3295,7 @@
         }, 
         {
             "stream_id": 2, 
-            "day": "March 13th", 
+            "day": "March 13th (Quarter Finals)", 
             "areas": [
                 {
                     "points": [
@@ -5296,7 +5296,7 @@
         }, 
         {
             "stream_id": 3, 
-            "day": "March 14th", 
+            "day": "March 14th (Semi Finals)", 
             "areas": [
                 {
                     "points": [
@@ -7059,7 +7059,7 @@
         }, 
         {
             "stream_id": 4, 
-            "day": "March 15th", 
+            "day": "March 15th (Grand Finals)", 
             "areas": [
                 {
                     "points": [
