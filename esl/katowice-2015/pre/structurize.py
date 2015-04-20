@@ -3,6 +3,7 @@ import csv
 from dateutil.parser import parse
 from datetime import datetime, timedelta
 import json
+import numpy
 
 types = ["break", "analysis", "game"]
 tournament_dates = {
@@ -803,6 +804,25 @@ timeline = {
     "lol": {}
 }
 
+def breaks(js):
+    streams = js["streams"]
+    number_breaks = 0
+    breaks = []
+
+    for stream in streams:
+        areas = stream["areas"][1:len(stream["areas"])-2]
+        for i in range(len(areas)):
+            chunk = areas[i]
+            if chunk["type"] == "break" and (areas[i-1]["type"] == "game" or areas[i-2]["type"] == "game"):
+                number_breaks += 1
+                start = chunk["points"][0]["count"]
+                end = chunk["points"][-1]["count"]
+
+                breaks.append(start - end)
+
+
+    print number_breaks, numpy.mean(breaks), numpy.std(breaks)
+
 def stats(game):
     print "Game: ", game
     print ""
@@ -942,6 +962,8 @@ def structurize(streams, game):
 
 if __name__ == '__main__':
     stats("csgo")
+    js = structurize(get_streams("esl_csgo-pruned.csv"), "csgo")
+    breaks(js)
 
     """
     js = structurize(get_streams("esl_csgo-pruned.csv"), "csgo")
