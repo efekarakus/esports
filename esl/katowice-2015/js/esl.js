@@ -18,7 +18,7 @@ $(document).ready(function() {
 		var previousArrow = leftArrow();
 		d3.select(".left.arrow")
 			.datum({
-				titles: streams.filter(function(s) { return s.day; })
+				titles: streams.map(function(s) { return s.day; })
 			})
 			.call(previousArrow);
 		previousArrow.turnInvisible();
@@ -26,7 +26,7 @@ $(document).ready(function() {
 		var nextArrow = rightArrow();
 		d3.select(".right.arrow")
 			.datum({
-				titles: streams.filter(function(s) { return s.day; })
+				titles: streams.map(function(s) { return s.day; })
 			})
 			.call(nextArrow);
 

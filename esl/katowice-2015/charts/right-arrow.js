@@ -34,7 +34,29 @@ function rightArrow() {
 							"L " + positions[2].x + " " + positions[2].y + " " +
 							"L " + positions[0].x + " " + positions[0].y);
 
+			arrow.each(function() {
+				chart.tooltip(this);
+			})
 		})
+	}
+
+	chart.tooltip = function(elem) {
+		$(elem).qtip({
+			content: {
+				title: "Next",
+				text: titles[titleIndex]
+			},
+			style: {
+				classes: "qtip-dark qtip-shadow"
+			},
+			position: {
+				target: "mouse",
+				adjust: {
+					x: -40, 
+					y: 20
+				}
+			}
+		});
 	}
 
 
@@ -73,7 +95,9 @@ function rightArrow() {
 
 		if (titleIndex !== -1) {
 			titleIndex -= 1;
-			// TODO update tooltip
+			svg.select("g").each(function() {
+				chart.tooltip(this);
+			})
 		}
 	}
 
@@ -83,7 +107,9 @@ function rightArrow() {
 			chart.turnInvisible();
 		} else {
 			titleIndex += 1;
-			// TODO update tooltip
+			svg.select("g").each(function() {
+				chart.tooltip(this);
+			})
 		}
 	}
 
