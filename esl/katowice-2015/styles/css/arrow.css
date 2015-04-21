@@ -1,0 +1,16 @@
+.arrow g.visible {
+	stroke: #CCC;
+	stroke-width: 1;
+	fill: #fff;
+	fill-opacity: 0.1;
+}
+
+.arrow g.visible:hover {
+	cursor: pointer;
+	fill-opacity: 0.4;
+}
+
+.arrow g.invisible {
+	stroke-width: 0;
+	fill: none;
+}

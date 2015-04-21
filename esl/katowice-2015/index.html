@@ -13,6 +13,7 @@
         </script>
         <link rel="stylesheet" type="text/css" href="./styles/css/main.css">
         <link rel="stylesheet" type="text/css" href="./styles/css/sar.css">
+        <link rel="stylesheet" type="text/css" href="./styles/css/arrow.css">
 	</head>
 	<body>
         <div class="title">
@@ -35,13 +36,17 @@
             <h2>ESL One Katowice</h2>
             <p>
                 In the interactives below, we display the viewership numbers for every day of the CS:GO major. Starting from the finals going down to
-                the group stages.
+                the group stages. We only kept track of the <a href="http://www.twitch.tv/esl_csgo" target="_blank">esl_csgo</a> Twitch channel.
             </p>
         </div>
-        <div class="chart" id="esl-one-chart"></div>
+        <div class="rollable">
+            <div class="left arrow"></div>
+            <div class="chart" id="esl-one-chart"></div>
+            <div class="right arrow"></div>
+        </div>
         <div class="writing">
             <p>
-                For the CS:GO finals, the viewers have spent 66% of their time watching the games. Breaks took 18% of the total and analysis 16%.
+                We can see certain expected patterns such as the number of viewers dropping whenever a break or the analysis desk rolls in.
             </p>
         </div>
         <div class="writing" id="iem">
@@ -79,5 +84,7 @@
     <script type="text/javascript" src="./libraries/d3.min.js"></script>
     <script type="text/javascript" src="./libraries/jquery-1.11.2.min.js"></script>
     <script type="text/javascript" src="./charts/segmented-area-chart.js"></script>
+    <script type="text/javascript" src="./charts/left-arrow.js"></script>
+    <script type="text/javascript" src="./charts/right-arrow.js"></script>
     <script type="text/javascript" src="./js/esl.js"></script>
 </html>

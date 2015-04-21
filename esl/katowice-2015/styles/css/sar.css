@@ -1,5 +1,5 @@
 .chart {
-	margin: 0 auto;
+	float: left;
 	width: 1000px;
 	height: 300px;
 	margin-bottom: 20px;
@@ -33,16 +33,22 @@
 }
 
 .chart .area.break {
-	fill: #212F40;
-	fill-opacity: 0.1;
+	fill: #fff;
+	fill-opacity: 0.7;
 }
 
 .chart .area.analysis {
-	fill: #212F40;
+	fill: #fff;
 	fill-opacity: 0.3;
 }
 
 .chart .area.game {
 	fill: #3D6899;
-	fill-opacity: 1;
+	fill-opacity: 0.6;
 }
+
+.chart .area.game:hover {
+	fill-opacity: 1;
+	stroke-width: 2;
+	cursor: pointer;
+};
