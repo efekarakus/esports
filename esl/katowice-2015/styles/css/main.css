@@ -1,9 +1,15 @@
 body {
-	margin-top: 100px;
 	margin-bottom: 100px;
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	line-height: 150%;
     background-color: #10171F;
+}
+
+p.note {
+    line-height: 120%;
+    font-size: 12px;
+    font-style: italic;
+    padding-bottom: 20px;
 }
 
 .title {
@@ -26,13 +32,18 @@ span.highlight {
 }
 
 .title h1 {
+    width: 700px;
+    height: 200px;
+    background-image: url('../images/cup.jpg');
     margin: 0;
     font-size: 30px;
     font-weight: 800;
     color: #fff;
+    padding-left: 5px;
     padding-bottom: 8px;
     border-bottom: 1px solid #fff; 
     margin-bottom: 5px;
+    line-height: 380px;
 }
 
 
