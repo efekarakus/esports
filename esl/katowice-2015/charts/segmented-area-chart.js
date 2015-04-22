@@ -146,10 +146,10 @@ function segmentedAreaChart()
 					content: {
 						text: 
 							"<table>" +
-								"<tr><td><img src='../styles/images/team-logos/"+ teamToImg[game.teamA] +".png'>" 
+								"<tr><td><img src='./styles/images/team-logos/"+ teamToImg[game.teamA] +".png'>" 
 								+"</img></td><td class='title'>" + game.teamA + "</td><td>" + game.scoreA + "</td></tr>" +
 
-								"<tr><td><img src='../styles/images/team-logos/"+ teamToImg[game.teamB] +".png'>" 
+								"<tr><td><img src='./styles/images/team-logos/"+ teamToImg[game.teamB] +".png'>" 
 								+"</img></td><td class='title'>" + game.teamB + "</td><td>" + game.scoreB + "</td></tr>" +
 							"</table>"
 					},
