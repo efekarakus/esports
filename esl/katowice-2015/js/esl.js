@@ -71,7 +71,49 @@ $(document).ready(function() {
 				areas: [streams[0].areas[4]]
 			})
 			.call(retentionChart);
-
 	});
 
+
+	// draw the legend
+
+	var legend = d3.selectAll(".legend")
+		.append("svg")
+			.attr("width", 1200)
+			.attr("height", 20);
+
+	legend.append("rect")
+		.attr("x", 800)
+		.attr("y", 0)
+		.attr("width", 20)
+		.attr("height", 20)
+		.attr("class", "game");
+
+	legend.append("text")
+		.attr("x", 825)
+		.attr("y", 14)
+		.text("Game");
+
+	legend.append("rect")
+		.attr("x", 890)
+		.attr("y", 0)
+		.attr("width", 20)
+		.attr("height", 20)
+		.attr("class", "analysis");
+
+	legend.append("text")
+		.attr("x", 915)
+		.attr("y", 14)
+		.text("Analysis");
+
+	legend.append("rect")
+		.attr("x", 980)
+		.attr("y", 0)
+		.attr("width", 20)
+		.attr("height", 20)
+		.attr("class", "break");
+
+	legend.append("text")
+		.attr("x", 1005)
+		.attr("y", 14)
+		.text("Break");
 })
