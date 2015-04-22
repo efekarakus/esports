@@ -47,7 +47,7 @@ function rightArrow() {
 				text: titles[titleIndex]
 			},
 			style: {
-				classes: "qtip-dark qtip-shadow"
+				classes: "sar-darkblue qtip-shadow"
 			},
 			position: {
 				target: "mouse",

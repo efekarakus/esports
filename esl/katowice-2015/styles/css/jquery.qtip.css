@@ -124,36 +124,45 @@
 	}
 
 
-/*! Light tooltip style */
-.qtip-light{
-	background-color: white;
-	border-color: #E2E2E2;
-	color: #454545;
+.sar-darkblue{
+	background-color: #10171F;
+	border-color: #CCC;
+	color: #fff;
 }
 
-	.qtip-light .qtip-titlebar{
-		background-color: #f1f1f1;
+	.qtip-content table {
+		color: #fff;
+		font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+		font-size: 12px;
 	}
 
-
-/*! Dark tooltip style */
-.qtip-dark{
-	background-color: #505050;
-	border-color: #303030;
-	color: #f3f3f3;
-}
-
-	.qtip-dark .qtip-titlebar{
-		background-color: #404040;
+	.qtip-content td.title {
+		width: 100px;
+		text-align: center;
 	}
 
-	.qtip-dark .qtip-icon{
+	.qtip-content img {
+		width: 24px;
+		height: 24px;
+	}
+
+	.sar-darkblue .qtip-titlebar{
+		background-color: #425F7F;
+	}
+
+	.sar-darkblue .qtip-icon{
 		border-color: #444;
 	}
 
-	.qtip-dark .qtip-titlebar .ui-state-hover{
-		border-color: #303030;
+	.sar-darkblue .qtip-titlebar .ui-state-hover{
+		border-color: #CCC;
 	}
+
+.qtip-shadow{
+	-webkit-box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.15);
+	box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.15);
+}
 
 
 /*! Cream tooltip style */
@@ -170,69 +179,6 @@
 	.qtip-cream .qtip-close .qtip-icon{
 		background-position: -82px 0;
 	}
-
-
-/*! Red tooltip style */
-.qtip-red{
-	background-color: #F78B83;
-	border-color: #D95252;
-	color: #912323;
-}
-
-	.qtip-red .qtip-titlebar{
-		background-color: #F06D65;
-	}
-
-	.qtip-red .qtip-close .qtip-icon{
-		background-position: -102px 0;
-	}
-
-	.qtip-red .qtip-icon{
-		border-color: #D95252;
-	}
-
-	.qtip-red .qtip-titlebar .ui-state-hover{
-		border-color: #D95252;
-	}
-
-
-/*! Green tooltip style */
-.qtip-green{
-	background-color: #CAED9E;
-	border-color: #90D93F;
-	color: #3F6219;
-}
-
-	.qtip-green .qtip-titlebar{
-		background-color: #B0DE78;
-	}
-
-	.qtip-green .qtip-close .qtip-icon{
-		background-position: -42px 0;
-	}
-
-
-/*! Blue tooltip style */
-.qtip-blue{
-	background-color: #E5F6FE;
-	border-color: #ADD9ED;
-	color: #5E99BD;
-}
-
-	.qtip-blue .qtip-titlebar{
-		background-color: #D0E9F5;
-	}
-
-	.qtip-blue .qtip-close .qtip-icon{
-		background-position: -2px 0;
-	}
-
-
-.qtip-shadow{
-	-webkit-box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.15);
-	-moz-box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.15);
-	box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.15);
-}
 
 /* Add rounded corners to your tooltips in: FF3+, Chrome 2+, Opera 10.6+, IE9+, Safari 2+ */
 .qtip-rounded,

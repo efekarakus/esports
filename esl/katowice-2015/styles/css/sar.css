@@ -47,8 +47,14 @@
 	fill-opacity: 0.6;
 }
 
-.chart .area.game:hover {
-	fill-opacity: 1;
+.chart circle.details {
+	stroke: #fff;
 	stroke-width: 2;
+	fill: #84BDFF;
+}
+
+.chart circle.details:hover {
 	cursor: pointer;
-};
+	stroke: #84BDFF;
+	fill: #fff;
+}

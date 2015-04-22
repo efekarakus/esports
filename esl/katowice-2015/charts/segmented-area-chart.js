@@ -9,6 +9,22 @@ function segmentedAreaChart()
 
 	var parseDate = d3.time.format("%Y-%m-%d %H:%M:%S");
 
+	var teamToImg = {
+		"TEAM ENVYUS": "envy",
+		"Titan": "titan",
+		"LGB eSports": "lgbesports",
+		"Natus Vincere": "natusvincere",
+		"fnatic": "fnatic",
+		"Vox Eminor": "vox",
+		"Ninjas in Pyjamas": "nip",
+		"Counter Logic Gaming": "clg",
+		"Virtus.Pro": "virtuspro",
+		"Cloud9 G2A": "cloud9",
+		"Keyd Stars": "keydstars",
+		"PENTA Sports": "pentasports",
+		"TSM Kinguin": "tsm"
+	}
+
 	function chart(selection) {
 		selection.each(function(data) {
 			
@@ -92,6 +108,64 @@ function segmentedAreaChart()
 					.attr("class", "title")
 					.text(showTitle ? title : "");
 
+
+			var games = areas.filter(function(area) { return area.type === "game"; });
+			var ignoreList = [
+				{scoreA: 1, scoreB: 0, teamA: "TEAM ENVYUS", teamB: "Natus Vincere"},
+				{scoreA: 16, scoreB: 1, teamA: "Virtus.Pro", teamB: "Keyd Stars"},
+				{scoreA: 17, scoreB: 19, teamA: "Virtus.Pro", teamB: "Keyd Stars"},
+				{scoreA: 16, scoreB: 4, teamA: "Virtus.Pro", teamB: "Keyd Stars"}
+			]
+
+			games = games.filter(function(game) {
+				for (var i  = 0; i < ignoreList.length; i++) {
+					var ignore = ignoreList[i];
+					if (game.scoreA === ignore.scoreA 
+						&& game.scoreB === ignore.scoreB
+						&& game.teamA === ignore.teamA
+						&& game.teamB === ignore.teamB)
+						return false;
+				}
+				return true;
+			});
+
+			games.forEach(function(game) {
+				var points = game.points.slice();
+				points.sort(function(a, b) { return b.count - a.count });
+
+				var medianCount = points[Math.floor(points.length/2)].count;
+				var medianTime = points[Math.floor(points.length/2)].timestamp;
+
+				var circle = svg.append("circle")
+					.attr("cx", x(medianTime))
+					.attr("cy", y(medianCount))
+					.attr("r", 8)
+					.attr("class", "details"); 
+
+				$(circle[0][0]).qtip({
+					content: {
+						text: 
+							"<table>" +
+								"<tr><td><img src='../styles/images/team-logos/"+ teamToImg[game.teamA] +".png'>" 
+								+"</img></td><td class='title'>" + game.teamA + "</td><td>" + game.scoreA + "</td></tr>" +
+
+								"<tr><td><img src='../styles/images/team-logos/"+ teamToImg[game.teamB] +".png'>" 
+								+"</img></td><td class='title'>" + game.teamB + "</td><td>" + game.scoreB + "</td></tr>" +
+							"</table>"
+					},
+					style: {
+						classes: "sar-darkblue qtip-shadow",
+					},
+					position: {
+						my: 'bottom center',
+						at: 'top center',
+						adjust: {
+							x: 10,
+							y: -3
+						}
+					}
+				})
+			});
 		});
 	}
 
