@@ -22,7 +22,15 @@ function segmentedAreaChart()
 		"Cloud9 G2A": "cloud9",
 		"Keyd Stars": "keydstars",
 		"PENTA Sports": "pentasports",
-		"TSM Kinguin": "tsm"
+		"TSM Kinguin": "tsm",
+		"Cloud9": "cloud9",
+		"Team SoloMid": "tsm",
+		"Team WE": "we",
+		"yoe Flash Wolves": "yoe",
+		"SK Gaming": "sk",
+		"CJ Entus": "cj",
+		"GE Tigers": "get",
+		"Gambit Gaming": "gmb"
 	}
 
 	function chart(selection) {
@@ -114,7 +122,10 @@ function segmentedAreaChart()
 				{scoreA: 1, scoreB: 0, teamA: "TEAM ENVYUS", teamB: "Natus Vincere"},
 				{scoreA: 16, scoreB: 1, teamA: "Virtus.Pro", teamB: "Keyd Stars"},
 				{scoreA: 17, scoreB: 19, teamA: "Virtus.Pro", teamB: "Keyd Stars"},
-				{scoreA: 16, scoreB: 4, teamA: "Virtus.Pro", teamB: "Keyd Stars"}
+				{scoreA: 16, scoreB: 4, teamA: "Virtus.Pro", teamB: "Keyd Stars"},
+				{scoreA: 1, scoreB: 0, teamA: "Team WE", teamB: "Gambit Gaming"},
+				{scoreA: 0, scoreB: 1, teamA: "CJ Entus", teamB: "Team SoloMid"},
+				{scoreA: 1, scoreB: 0, teamA: "Team SoloMid", teamB: "Team WE"}
 			]
 
 			games = games.filter(function(game) {
