@@ -1015,6 +1015,200 @@ timeline = {
                 "start": (11, 39, 38),
                 "end": (11, 44, 16)
             }
+        ],
+        2: [
+            {
+                "type": 0,
+                "start": (0, 0, 0),
+                "end": (0, 29, 46)
+            },
+            {
+                "type": 1,
+                "start": (0, 29, 46),
+                "end": (0, 47, 30)
+            },
+            {
+                "type": 2,
+                "teamA": "SK Gaming",
+                "teamB": "yoe Flash Wolves",
+                "scoreA": 0,
+                "scoreB": 1,
+                "start": (0, 47, 30),
+                "end": (1, 30, 14)
+            },
+            {
+                "type": 1,
+                "start": (1, 30, 14),
+                "end": (1, 43, 57)
+            },
+            {
+                "type": 0,
+                "start": (1, 43, 57),
+                "end": (1, 52, 26)
+            },
+            {
+                "type": 1,
+                "start": (1, 52, 26),
+                "end": (2, 3, 20)
+            },
+            {
+                "type": 2,
+                "teamA": "Team WE",
+                "teamB": "CJ Entus",
+                "scoreA": 1,
+                "scoreB": 0,
+                "start": (2, 3, 20),
+                "end": (2, 53, 27)
+            },
+            {
+                "type": 1,
+                "start": (2, 53, 27),
+                "end": (3, 4, 57)
+            },
+            {
+                "type": 0,
+                "start": (3, 4, 57),
+                "end": (3, 16, 44)
+            },
+            {
+                "type": 1,
+                "start": (3, 16, 44),
+                "end": (3, 26, 43)
+            },
+            {
+                "type": 2,
+                "teamA": "Team SoloMid",
+                "teamB": "yoe Flash Wolves",
+                "scoreA": 0,
+                "scoreB": 1,
+                "start": (3, 26, 43),
+                "end": (4, 13, 35)
+            },
+            {
+                "type": 1,
+                "start": (4, 13, 35),
+                "end": (4, 21, 59)
+            },
+            {
+                "type": 0,
+                "start": (4, 21, 59),
+                "end": (4, 29, 46)
+            },
+            {
+                "type": 2,
+                "teamA": "yoe Flash Wolves",
+                "teamB": "Team SoloMid",
+                "scoreA": 0,
+                "scoreB": 1,
+                "start": (4, 29, 46),
+                "end": (5, 25, 48)
+            },
+            {
+                "type": 1,
+                "start": (5, 25, 48),
+                "end": (5, 30, 29)
+            },
+            {
+                "type": 0,
+                "start": (5, 30, 29),
+                "end": (5, 38, 59)
+            },
+            {
+                "type": 1,
+                "start": (5, 38, 59),
+                "end": (5, 42, 55)
+            },
+            {
+                "type": 2,
+                "teamA": "yoe Flash Wolves",
+                "teamB": "Team SoloMid",
+                "scoreA": 0,
+                "scoreB": 1,
+                "start": (5, 42, 55),
+                "end": (6, 23, 3)
+            },
+            {
+                "type": 1,
+                "start": (6, 23, 3),
+                "end": (6, 32, 9)
+            },
+            {
+                "type": 0,
+                "start": (6, 32, 9),
+                "end": (6, 41, 1)
+            },
+            {
+                "type": 1,
+                "start": (6, 41, 1),
+                "end": (6, 50, 37)
+            },
+            {
+                "type": 2,
+                "teamA": "GE Tigers",
+                "teamB": "Team WE",
+                "scoreA": 1,
+                "scoreB": 0,
+                "start": (6, 50, 37),
+                "end": (7, 33, 31)
+            },
+            {
+                "type": 1,
+                "start": (7, 33, 31),
+                "end": (7, 39, 8)
+            },
+            {
+                "type": 0,
+                "start": (7, 39, 8),
+                "end": (7, 47, 36)
+            },
+            {
+                "type": 1,
+                "start": (7, 47, 36),
+                "end": (7, 49, 41)
+            },
+            {
+                "type": 2,
+                "teamA": "Team WE",
+                "teamB": "GE Tigers",
+                "scoreA": 1,
+                "scoreB": 0,
+                "start": (7, 49, 41),
+                "end": (8, 26, 58)
+            },
+            {
+                "type": 1,
+                "start": (8, 26, 58),
+                "end": (8, 32, 14)
+            },
+            {
+                "type": 0,
+                "start": (8, 32, 14),
+                "end": (8, 41, 5)
+            },
+            {
+                "type": 1,
+                "start": (8, 41, 5),
+                "end": (8, 41, 50)
+            },
+            {
+                "type": 2,
+                "teamA": "Team WE",
+                "teamB": "GE Tigers",
+                "scoreA": 1,
+                "scoreB": 0,
+                "start": (8, 41, 50),
+                "end": (9, 16, 52)
+            },
+            {
+                "type": 1,
+                "start": (9, 16, 52),
+                "end": (9, 30, 9)
+            },
+            {
+                "type": 0,
+                "start": (9, 30, 9),
+                "end": (9, 33, 43)
+            }
         ]
     }
 }
