@@ -1,4 +1,5 @@
 body {
+    margin: 0;
 	margin-bottom: 100px;
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	line-height: 150%;
@@ -12,9 +13,12 @@ p.note {
     padding-bottom: 20px;
 }
 
-.title {
-    margin: 0 auto;
-    width: 700px;
+.header {
+    width: 100%;
+    height: 300px;
+    background-image: url('../images/stage.jpg');
+    background-position: center center;
+    border-bottom: 1px solid #fff; 
 }
 
 a {
@@ -31,23 +35,25 @@ span.highlight {
     color: #fff;
 }
 
-.title h1 {
+.header h1 {
+    margin: 0 auto;
     width: 700px;
-    height: 200px;
-    background-image: url('../images/cup.jpg');
-    margin: 0;
+    height: 300px;
     font-size: 30px;
     font-weight: 800;
     color: #fff;
     padding-left: 5px;
     padding-bottom: 8px;
-    border-bottom: 1px solid #fff; 
     margin-bottom: 5px;
-    line-height: 380px;
+    line-height: 560px;
 }
 
+.header .social {
+    margin: 0 auto;
+    width: 700px;
+}
 
-.title .social a {
+.header .social a {
     float: right;
     font-size: 14px;
 }
