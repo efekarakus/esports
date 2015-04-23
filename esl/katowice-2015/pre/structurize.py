@@ -1209,6 +1209,85 @@ timeline = {
                 "start": (9, 30, 9),
                 "end": (9, 33, 43)
             }
+        ],
+        3: [
+            {
+                "type": 0,
+                "start": (0, 0, 0),
+                "end": (0, 23, 30)
+            },
+            {
+                "type": 1,
+                "start": (0, 23, 30),
+                "end": (0, 34, 59)
+            },
+            {
+                "type": 2,
+                "teamA": "Team WE",
+                "teamB": "Team SoloMid",
+                "scoreA": 0,
+                "scoreB": 1,
+                "start": (0, 34, 59),
+                "end": (1, 23, 51)
+            },
+            {
+                "type": 1,
+                "start": (1, 23, 51),
+                "end": (1, 27, 49)
+            },
+            {
+                "type": 0,
+                "start": (1, 27, 49),
+                "end": (1, 35, 48)
+            },
+            {
+                "type": 1,
+                "start": (1, 35, 48),
+                "end": (1, 38, 33)
+            },
+            {
+                "type": 2,
+                "teamA": "Team SoloMid",
+                "teamB": "Team WE",
+                "scoreA": 1,
+                "scoreB": 0,
+                "start": (1, 38, 33),
+                "end": (2, 16, 20)
+            },
+            {
+                "type": 1,
+                "start": (2, 16, 20),
+                "end": (2, 21, 3)
+            },
+            {
+                "type": 0,
+                "start": (2, 21, 3),
+                "end": (2, 29, 24)
+            },
+            {
+                "type": 1,
+                "start": (2, 29, 24),
+                "end": (2, 31, 22)
+            },
+            {
+                "type": 2,
+                "teamA": "Team WE",
+                "teamB": "Team SoloMid",
+                "scoreA": 0,
+                "scoreB": 1,
+                "start": (2, 31, 22),
+                "end": (3, 3, 42)
+            },
+            {
+                "type": 1,
+                "start": (3, 3, 42),
+                "end": (3, 11, 7)
+            },
+            {
+                "type": 0,
+                "start": (3, 11, 7),
+                "end": (3, 22, 21)
+            }
         ]
     }
 }

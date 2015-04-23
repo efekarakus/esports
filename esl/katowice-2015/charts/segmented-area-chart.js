@@ -134,7 +134,8 @@ function segmentedAreaChart()
 					if (game.scoreA === ignore.scoreA 
 						&& game.scoreB === ignore.scoreB
 						&& game.teamA === ignore.teamA
-						&& game.teamB === ignore.teamB)
+						&& game.teamB === ignore.teamB
+						&& title.indexOf("March 13th") !== -1 )
 						return false;
 				}
 				return true;
