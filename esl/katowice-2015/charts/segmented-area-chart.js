@@ -108,7 +108,7 @@ function segmentedAreaChart()
 					.attr("y", 6)
 					.attr("dy", ".71em")
 					.style("text-anchor", "end")
-					.text("Viewers");
+					.text("Concurrent Users (CCU)");
 
 			svg.append("g")
 				.append("text")
