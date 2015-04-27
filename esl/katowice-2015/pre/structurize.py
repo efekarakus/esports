@@ -1449,14 +1449,16 @@ def structurize(streams, game):
 
 
 if __name__ == '__main__':
+    stats("csgo")
     stats("lol")
     #js = structurize(get_streams("esl_csgo-pruned.csv"), "csgo")
     #breaks(js)
 
+    """
     js = structurize(get_streams("esl_lol-pruned.csv"), "lol")
     with open("esl_lol.json", "w") as f:
         json.dump(js, f)
-
+    """
     """
     js = structurize(get_streams("esl_csgo-pruned.csv"), "csgo")
     with open("esl_csgo.json", "w") as f:

@@ -133,45 +133,71 @@ $(document).ready(function() {
 	})
 
 	// draw the legend
+	function legend() {
+		var legend = d3.selectAll(".legend")
+			.append("svg")
+				.attr("width", 1200)
+				.attr("height", 20);
 
-	var legend = d3.selectAll(".legend")
-		.append("svg")
-			.attr("width", 1200)
-			.attr("height", 20);
+		legend.append("rect")
+			.attr("x", 800)
+			.attr("y", 0)
+			.attr("width", 20)
+			.attr("height", 20)
+			.attr("class", "game");
 
-	legend.append("rect")
-		.attr("x", 800)
-		.attr("y", 0)
-		.attr("width", 20)
-		.attr("height", 20)
-		.attr("class", "game");
+		legend.append("text")
+			.attr("x", 825)
+			.attr("y", 14)
+			.text("Game");
 
-	legend.append("text")
-		.attr("x", 825)
-		.attr("y", 14)
-		.text("Game");
+		legend.append("rect")
+			.attr("x", 890)
+			.attr("y", 0)
+			.attr("width", 20)
+			.attr("height", 20)
+			.attr("class", "analysis");
 
-	legend.append("rect")
-		.attr("x", 890)
-		.attr("y", 0)
-		.attr("width", 20)
-		.attr("height", 20)
-		.attr("class", "analysis");
+		legend.append("text")
+			.attr("x", 915)
+			.attr("y", 14)
+			.text("Analysis");
 
-	legend.append("text")
-		.attr("x", 915)
-		.attr("y", 14)
-		.text("Analysis");
+		legend.append("rect")
+			.attr("x", 980)
+			.attr("y", 0)
+			.attr("width", 20)
+			.attr("height", 20)
+			.attr("class", "break");
 
-	legend.append("rect")
-		.attr("x", 980)
-		.attr("y", 0)
-		.attr("width", 20)
-		.attr("height", 20)
-		.attr("class", "break");
+		legend.append("text")
+			.attr("x", 1005)
+			.attr("y", 14)
+			.text("Break");
+	}
+	legend();
 
-	legend.append("text")
-		.attr("x", 1005)
-		.attr("y", 14)
-		.text("Break");
+	// Pie charts
+	var CSGO = [
+		{hours: 8, minutes: 20, seconds: 57, type: "break"},
+		{hours: 9, minutes: 54, seconds: 26, type: "analysis"},
+		{hours: 18, minutes: 47, seconds: 35, type: "game"}
+	];
+
+	var LOL = [
+		{hours: 4, minutes: 38, seconds: 12, type: "break"},
+		{hours: 6, minutes: 14, seconds: 55, type: "analysis"},
+		{hours: 13, minutes: 47, seconds: 13, type: "game"}
+	];
+
+	function drawPies(selection, data) {
+		var p = pie();
+
+		d3.select(selection)
+			.datum(data)
+			.call(p);
+	}
+
+	drawPies("#csgo-time", CSGO);
+	drawPies("#lol-time", LOL);
 })

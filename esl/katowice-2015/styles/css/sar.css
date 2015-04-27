@@ -8,6 +8,13 @@
 	height: 200px;
 }
 
+.titled-chart .chart {
+	clear: both;
+	width: 300px;
+	height: 300px;
+	border-bottom: 1px solid #fff;
+}
+
 .chart text {
 	font: 10px sans-serif;
 	fill: #fff;
@@ -42,6 +49,27 @@
 }
 
 .chart .area.game {
+	fill: #3D6899;
+	fill-opacity: 0.6;
+}
+
+.chart path.break {
+	stroke: #CCC;
+	stroke-width: 1;
+	fill: #fff;
+	fill-opacity: 0.7;
+}
+
+.chart path.analysis {
+	stroke: #CCC;
+	stroke-width: 1;
+	fill: #fff;
+	fill-opacity: 0.3;
+}
+
+.chart path.game {
+	stroke: #CCC;
+	stroke-width: 1;
 	fill: #3D6899;
 	fill-opacity: 0.6;
 }
